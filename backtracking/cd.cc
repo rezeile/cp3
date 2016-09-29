@@ -20,20 +20,20 @@ bool addTrack(int index,vi &arr,vi &best,int &sum) {
     //assert(index < arr.size());
     int new_sum = sum + arr[index];
     if(index >= arr.size() || new_sum > limit) return false;
-    sum = new_sum;
-    best.push_back(arr[index]);
-    if(sum > max_sum) {
-        overall_best = best; 
-        max_sum = sum;
-    }
     return true;
 }
 
 void bestTracksHelper(int index,vi &input_array,vi &best,int &sum) {
-    if(addTrack(index,input_array,best,sum))
+    if(addTrack(index,input_array,best,sum)) {
+        sum += input_array[index];
+        best.push_back(input_array[index]);
+        if(sum > max_sum) {
+            overall_best = best; 
+            max_sum = sum;
+        }
         bestTracksHelper(index + 1,input_array,best,sum);
-    else if((index + 2) < input_array.size()) {
-        bestTracksHelper(index + 2,input_array,best,sum);
+    } else {
+        
     }
 }
 
