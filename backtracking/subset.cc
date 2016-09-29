@@ -20,8 +20,8 @@
         res.push_back(v);
         return res;
     }
-    int val = v[0];
-    vector<int> v_rest(v.begin() + 1,v.end());
+    int val = v[v.size() - 1];
+    vector<int> v_rest(v.begin(),v.end() - 1);
     vii ssets = subsets(v_rest);
     vii result(ssets);
     for(int j = 0; j < ssets.size(); j++) {
