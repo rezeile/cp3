@@ -11,7 +11,7 @@ void bestTracks(vi &input_array);
 void bestTracksHelper(int index,vi &input_array,vi &best, int &sum);
 bool addTrack(int index,vi &arr,vi &best,int &sum);
 void printResult();
-
+void printArray(vector<int> &v);
 // global variables
 vi overall_best;
 int limit, max_sum;
@@ -29,9 +29,11 @@ bool addTrack(int index,vi &arr,vi &best,int &sum) {
 }
 
 void bestTracksHelper(int index,vi &input_array,vi &best,int &sum) {
-    if(addTrack(index,input_array,best,sum)) {
-        for(int i = index + 1; i < input_array.size(); i++) {
+    for(int i = index; i < input_array.size(); i++) {
+        if(addTrack(i,input_array,best,sum)) {
             bestTracksHelper(i+1,input_array,best,sum);
+            best.pop_back();
+            sum -= input_array[i];
         }
     }
 }
@@ -40,11 +42,20 @@ void bestTracks(vi &input_array) {
     for(int i = 0; i < input_array.size(); i++) {
         vi cur_best;
         int sum = 0;
-        if(addTrack(i,input_array,cur_best,sum))
-            bestTracksHelper(i+1,input_array,cur_best,sum);
+        bestTracksHelper(i,input_array,cur_best,sum);
+        
     }
     printResult();
 }
+
+void printArray(vector<int> &v) {
+    printf("[");
+    for(int i = 0; i < v.size(); i++) {
+        if(i != v.size() - 1) printf("%d,",v[i]);
+        else printf("%d]\n",v[i]);
+    }
+}
+
 
 void printResult() {
     for(int i = 0; i < overall_best.size(); i++) {
