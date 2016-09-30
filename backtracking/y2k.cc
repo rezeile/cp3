@@ -39,16 +39,17 @@ bool isSurplusMonth(int index,MCFinancials &mc,uint &surplus_months) {
 void backtrack(uint start,uint end,MCFinancials &mc,uint &surplus_months) {
     for(uint i = start; i < end; i++) {
         if(isSurplusMonth(i,mc,surplus_months)) {
-            //printArray(mc.months);
             backtrack(i+1,end,mc,surplus_months);
-            //surplus_months -= 1;
-            //mc.months[i] = 0;
         }
     }
 }
 
 void maximizeSurplus(MCFinancials &mc) {
     uint surplus_months = 0;
+    if(!mc.max_fivemo_sp) {
+        printResult(mc);
+        return;
+    }
     for(uint i = 0; i < 8; i++) {
         backtrack(i,i+5,mc,surplus_months); 
     }
@@ -82,11 +83,7 @@ void computeMostSurplusInFiveMonthStretch(MCFinancials &mc) {
 }
 
 int main(int argc, char *argv[]) {
-    if(argc < 2) {
-        cerr << "enter an input file" << endl; return -1;
-    }
     uint s,d;
-    freopen(argv[1],"r",stdin);
     while(cin >> s) {
         cin >> d;
         MCFinancials mc;
