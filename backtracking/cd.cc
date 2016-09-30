@@ -65,13 +65,9 @@ void printResult() {
 }
 
 int main(int argc, char *argv[]) {
-    if(argc < 2) {
-        fprintf(stderr,"enter an input file");
-        return -1;
-    }
     int N;
     int T;
-    freopen(argv[1],"r",stdin);
+    //freopen(argv[1],"r",stdin);
     while(true) {
         if(!(cin >> N)) break;
         if(!(cin >> T)) break;
