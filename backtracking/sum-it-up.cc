@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <set>
 #include <vector>
 #include <iostream>            // for cout,cin
@@ -19,40 +20,37 @@ void printResult(svi &result) {
         }
     }
 }
-void sumItUpHelper(int total,svi &v,vector<int> &candidate_set,vector<int> input_set) {
-    if(total < 0 || input_set.size() <= 0) return;
+void sumItUpHelper(int index,int total,svi &v,vector<int> &candidate_set,vector<int> input_set) {
+    if(index > input_set.size()|| total < 0) return;
     else if(total == 0) {
         vector<int> res(candidate_set);
+        sort(res.begin(),res.end(),greater<int>());
         v.insert(res);
     } else {
-       for(int i = 0; i < input_set.size(); i++) {
-            vector<int> input_sset(input_set);
-            int val = input_sset[i];
-            input_sset.erase(input_sset.begin() + i);
-            candidate_set.push_back(val);
-            sumItUpHelper(total - val,v,candidate_set,input_sset);
-            candidate_set.pop_back();
-            input_sset.insert(input_sset.begin() + i,val);
-       }
+        int val = input_set[index];
+        total -= val;
+        candidate_set.push_back(val);
+        for(int i = index + 1; i <= input_set.size(); i++) {
+            sumItUpHelper(i,total,v,candidate_set,input_set);   
+        }
+        candidate_set.pop_back();
+        total += val;
+
     }
 }
 
+
 svi sumItUp(int total,vector<int> s) {
     svi v;
-    vector<int>::iterator i;
-    for(i = s.begin(); i != s.end(); i++) {
+    for(int i = 0; i < s.size(); i++) {
         vector<int> sum_set;
-        sumItUpHelper(*i,v,sum_set,s);
+        sumItUpHelper(i,total,v,sum_set,s);
     }
     return v;
 }
 
 int main(int argc, char *argv[]) {
     int total,N;
-    if(argc < 2) {
-        cerr << "enter an input file" << endl; return -1;
-    }
-    freopen(argv[1],"r",stdin);
     while(cin >> total) {
         if(!total) break; // done 
         cin >> N;
