@@ -2,6 +2,10 @@
  * Longest Increasing Subsequence
  * UVa 481: What Goes Up
  *
+ * This solution requires the reconstruction of the longest 
+ * increasing subsequence of the array rather than simply
+ * the length of the longest increasing subsequence.
+ *
  * Author: Eliezer Abate
  * Last Updated October 3 2016
  *
@@ -25,9 +29,14 @@ void printLongestIncreasingSubsequence(vector<int> &v) {
             }
         }
     }
+    cout << sl[max_index] << endl;
 } 
 
-int main() {
+int main(int argc, char *argv[]) {
+    if(argc < 2) {
+        cerr << "enter an input file" << endl; return -1;
+    }
+    freopen(argv[1],"r",stdin);
     vector<int> v;
     int val;
     while(cin >> val) {
