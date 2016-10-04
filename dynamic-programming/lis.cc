@@ -17,7 +17,26 @@
 #include <iostream>
 #include <cstdio>
 #include <vector>
+#include <iterator>
+#include <set>
 using namespace std;
+typedef vector<int> si;
+
+void greedyLIS(vector<int> &v) {
+    if(v.size() == 0) return;
+    set<int> current_best; current_best.insert(v[0]);
+    set<int> overall_best = current_best;
+    int N = v.size();
+    set<int>::iterator it;
+    for(int i = 1; i < N; i++) {
+        it = current_best.lower_bound(v[i]);
+        if(it != current_best.end()) {
+            current_best.erase(it,current_best.end());
+        } 
+        current_best.insert(v[i]);
+        if(current_best.size() >= overall_best.size()) overall_best = current_best;
+    }
+}
 
 void printLongestIncreasingSubsequence(vector<int> &v) {
     if(v.size() == 0) return;
