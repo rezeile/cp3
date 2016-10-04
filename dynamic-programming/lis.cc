@@ -24,12 +24,9 @@ void printLongestIncreasingSubsequence(vector<int> &v) {
     // there is atleast a subsequence of size one for each element 
     vector<int> sl(v.size(),1); // subsequence length
     vector<vector<int>> subseq(v.size());
-    for(int i = 0; i < v.size(); i++) {
-        subseq[i].push_back(v[i]);
-    }
-    sl[0] = 1;
     int max_index = 0;
     for(int i = 1; i < v.size(); i++) {
+        subseq[i].push_back(v[i]);
         for(int j = 0; j < i; j++) {
             if(sl[i] <= (sl[j] + 1) && v[j] < v[i]) {
                 sl[i] = sl[j] + 1;
