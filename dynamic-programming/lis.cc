@@ -22,6 +22,16 @@
 using namespace std;
 typedef vector<int> si;
 
+template<typename Container>
+void printResult(int size, Container begin,Container end) {
+    cout << size << endl;
+    cout << "-" << endl;
+    Container i;
+    for(i = begin; i != end; i++) {
+        cout << *i << endl;
+    }
+}
+
 void greedyLIS(vector<int> &v) {
     if(v.size() == 0) return;
     set<int> current_best; current_best.insert(v[0]);
@@ -36,6 +46,7 @@ void greedyLIS(vector<int> &v) {
         current_best.insert(v[i]);
         if(current_best.size() >= overall_best.size()) overall_best = current_best;
     }
+    printResult(overall_best.size(),overall_best.begin(),overall_best.end());
 }
 
 void printLongestIncreasingSubsequence(vector<int> &v) {
@@ -55,23 +66,26 @@ void printLongestIncreasingSubsequence(vector<int> &v) {
         }
     }
     vector<int> lis = subseq[max_index];
-    cout << lis.size() << endl;
+    printResult(lis.size(),lis.begin(),lis.end());
+    /*cout << lis.size() << endl;
     cout << "-" << endl;
     for(int i = 0; i < lis.size(); i++) {
         cout << lis[i] << endl;
-    }
+    }*/
 } 
 
+
 int main(int argc, char *argv[]) {
-    /*if(argc < 2) {
+    if(argc < 2) {
         cerr << "enter an input file" << endl; return -1;
     }
-    freopen(argv[1],"r",stdin);*/
+    freopen(argv[1],"r",stdin);
     vector<int> v;
     int val;
     while(cin >> val) {
         v.push_back(val);
     }
-    printLongestIncreasingSubsequence(v);
+    //printLongestIncreasingSubsequence(v);
+    greedyLIS(v);
     return 0;
 }
