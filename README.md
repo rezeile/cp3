@@ -1,1 +1,1 @@
-six day marathon UVa preparation for palantir interview
+Starred problems from Competitive Programming 3
