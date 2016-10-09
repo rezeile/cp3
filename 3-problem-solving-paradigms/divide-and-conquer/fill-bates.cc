@@ -30,11 +30,11 @@ void fillBates(string query, string candidate_list) {
 }
 
 int main(int argc, char *argv[]) {
-    /*if(argc < 2) {
+    if(argc < 2) {
         cerr << "enter an input file.";
         return -1;
     }
-    freopen(argv[1],"r",stdin);*/
+    freopen(argv[1],"r",stdin);
     string candidates;
     getline(cin,candidates);
     int Q;
