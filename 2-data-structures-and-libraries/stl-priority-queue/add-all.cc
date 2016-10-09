@@ -27,6 +27,7 @@ int main(int argc, char *argv[]) {
         for(int i = 0; i < T; i++) {
             std::cin >> val;
             pq.push(val);
+            
         } 
         addAll(pq);
     }
