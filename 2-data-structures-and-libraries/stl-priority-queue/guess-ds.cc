@@ -7,11 +7,11 @@ int main(int argc, char *argv[]) {
     //if(argc < 2) {std::cout << "enter an input file"; return 0;}
     //std::freopen(argv[1],"r",stdin);
     int N, type, value;
-    std::stack<int> s;
-    std::queue<int> q;
-    std::priority_queue<int> pq;
     bool is_queue, is_pqueue, is_stack;
     while(std::cin >> N) {
+        std::stack<int> s;
+        std::queue<int> q;
+        std::priority_queue<int> pq;
         is_queue = is_pqueue = is_stack = true;
         for(int i = 0; i < N; i++) {
             std::cin >> type >> value; 
@@ -29,7 +29,7 @@ int main(int argc, char *argv[]) {
         else if(is_queue && is_pqueue) std::cout << "not sure\n";
         else if (is_stack) std::cout << "stack\n";
         else if (is_queue) std::cout << "queue\n";
-        else if (is_pqueue) std::cout << "priority_queue\n";
+        else if (is_pqueue) std::cout << "priority queue\n";
         else std::cout << "impossible\n";
     }
     return 0;
