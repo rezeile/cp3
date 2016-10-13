@@ -7,6 +7,6 @@ The actual problems are taken from [the UVa Online](https://uva.onlinejudge.org/
 the text does a great job of categorizing problems by problem type so that 
 programmers can get more targeted practice. 
 
-For example, if one wants extra practice solving problems that require the application of a Greedy Algorithm, 
+For example,if one wants extra practice solving problems that require the application of a Greedy Algorithm, 
 she can find a cornucopia of problems listed in their text that utilize said
 Algorithm.
