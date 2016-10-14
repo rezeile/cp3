@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cstdio>
+#include <vector>
 using namespace std;
 
 int main(int argc, char *argv[]) {
@@ -10,8 +11,21 @@ int main(int argc, char *argv[]) {
     while(cin >> duration) {
         if(duration < 0) break;
         cin >> down_pmt >> loan_amt >> depreciation;
+        double car_value = loan_amt + down_pmt;
+        double monthly_pmt = loan_amt / duration;
+        vector<double> monthly_rate(duration + 1);
+        // add monthly rates
         for(int i = 0; i < depreciation; i++) {
             cin >> month >> rate;
+            std::fill(monthly_rate.begin() + month,monthly_rate.end(),rate);
+        }
+        // compute compute depreciation and time to sell
+        double money_owed = loan_amt;
+        car_value -= (car_value * monthly_rate[0]);
+        for(int i = 1; i < duration + 1; i++) {
+            money_owed -= monthly_pmt;
+            car_value -= (car_value * monthly_rate[i]);
+            if(car_value > money_owed) {i == 1 ? printf("%d month\n",i) : printf("%d months\n",i);break;}
         }
     }
     return 0;
