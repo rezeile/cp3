@@ -11,14 +11,14 @@ class Compare {
     public: 
         bool operator() (tuple<string,int,double> &a, tuple<string,int,double> &b) {
             if(get<1>(a) < get<1>(b)) return true;
-            else if(get<1>(a) == get<1>(b) && get<2>(a) >=  get<2>(b)) return true;
+            else if(get<1>(a) == get<1>(b) && get<2>(a) >  get<2>(b)) return true;
             return false;
         }
 };
 
 int main(int argc, char *argv[]) {
-    //if(argc < 2) { cerr << "enter an input file"; return -1; }
-    //freopen(argv[1],"r",stdin);
+    if(argc < 2) { cerr << "enter an input file"; return -1; }
+    freopen(argv[1],"r",stdin);
     int N, P;
     bool first = true;
     int prop_num = 1;
