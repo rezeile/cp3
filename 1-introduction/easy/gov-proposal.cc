@@ -11,15 +11,16 @@ class Compare {
     public: 
         bool operator() (tuple<string,int,double> &a, tuple<string,int,double> &b) {
             if(get<1>(a) < get<1>(b)) return true;
-            else if(get<2>(a) < get<2>(b)) return true;
+            else if(get<1>(a) == get<1>(b) && get<2>(a) >=  get<2>(b)) return true;
             return false;
         }
 };
 
 int main(int argc, char *argv[]) {
-    if(argc < 2) { cerr << "enter an input file"; return -1; }
-    freopen(argv[1],"r",stdin);
+    //if(argc < 2) { cerr << "enter an input file"; return -1; }
+    //freopen(argv[1],"r",stdin);
     int N, P;
+    bool first = true;
     int prop_num = 1;
         while(scanf("%d %d\n",&N,&P) == 2) {
         if(N == 0) break;
@@ -46,7 +47,9 @@ int main(int argc, char *argv[]) {
             pq.push(t);
         }
         tuple<string,int,double> best = pq.top();
-        printf("RFP #%d\n%s\n\n",prop_num++,get<0>(best).c_str());
+        if(!first) { cout << endl; } else { first = false; }
+        printf("RFP #%d\n",prop_num++);
+        cout << get<0>(best) << endl;
     }
     return 0;
 }
