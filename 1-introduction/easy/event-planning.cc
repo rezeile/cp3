@@ -7,8 +7,8 @@ using namespace std;
 #define INF 1000000000
 
 int main(int argc, char *argv[]) {
-    if(argc < 2) { cerr << "enter an input file"; return -1; }
-    freopen(argv[1],"r",stdin);
+    //if(argc < 2) { cerr << "enter an input file"; return -1; }
+    //freopen(argv[1],"r",stdin);
     // obtain input 
     int N,B,H,W;
     while(cin >> N && !cin.eof()) {
