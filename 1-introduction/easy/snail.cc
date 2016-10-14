@@ -6,8 +6,8 @@ void climb(double H,double U,double D, double F) {
    double ff = (F / 100.0) * U;
    double height = 0.0;
    int day = 1;
-   while(U >= 0.0) {
-        height += U;
+   while(height >= 0.0) {
+        if(U > 0.0) height += U;
         if(height > H) {printf("success on day %d\n",day); return; };
         height -= D;
         if(height < 0) {printf("failure on day %d\n",day); return; };
