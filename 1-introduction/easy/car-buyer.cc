@@ -4,8 +4,8 @@
 using namespace std;
 
 int main(int argc, char *argv[]) {
-    if(argc < 2) { cerr << "enter an input file"; return -1; }
-    freopen(argv[1],"r",stdin);
+    //if(argc < 2) { cerr << "enter an input file"; return -1; }
+    //freopen(argv[1],"r",stdin);
     int duration,depreciation,month;
     double down_pmt,loan_amt,rate;
     while(cin >> duration) {
@@ -21,9 +21,8 @@ int main(int argc, char *argv[]) {
         }
         // compute compute depreciation and time to sell
         double money_owed = loan_amt;
-        car_value -= (car_value * monthly_rate[0]);
-        for(int i = 1; i < duration + 1; i++) {
-            money_owed -= monthly_pmt;
+        for(int i = 0; i < duration + 1; i++) {
+            if(i > 0) money_owed -= monthly_pmt;
             car_value -= (car_value * monthly_rate[i]);
             if(car_value > money_owed) {i == 1 ? printf("%d month\n",i) : printf("%d months\n",i);break;}
         }
