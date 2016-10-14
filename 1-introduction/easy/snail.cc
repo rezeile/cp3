@@ -18,8 +18,8 @@ void climb(double H,double U,double D, double F) {
 }
 
 int main(int argc, char *argv[]) {
-    if(argc < 2) { cerr << "enter an input file"; return -1; }
-    freopen(argv[1],"r",stdin);
+    //if(argc < 2) { cerr << "enter an input file"; return -1; }
+    //freopen(argv[1],"r",stdin);
     
     double H,U,F,D; 
     while(cin >> H) {

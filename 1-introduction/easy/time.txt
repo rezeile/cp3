@@ -1,1 +1,1 @@
-snail: 
+UVA 573 - snail - (level 1): 70:10 minutes 
