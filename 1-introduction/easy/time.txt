@@ -1,2 +1,2 @@
 UVA 573   - snail - (level 1): 70 mins 
-UVA 10141 - request for proposal (level 2): (115 mins)
+UVA 10141 - request for proposal (level 2): (115 mins) + (5 mins) = 120 mins
