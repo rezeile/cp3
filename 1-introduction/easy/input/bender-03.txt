@@ -6,4 +6,6 @@ No No No No
 +y
 5 
 +z +z +z +z 
+7
++z +z -y No +z -y
 0

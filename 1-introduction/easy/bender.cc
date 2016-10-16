@@ -6,7 +6,7 @@ using namespace std;
 
 string newDirection(string tip,string bend_dir) {
     if(tip[1] == 'x') {
-        return tip[0] == '+' ? bend_dir : "-" + string(1,bend_dir[1]); 
+        return tip[0] == '+' ? bend_dir : (bend_dir[0] == '-' ? "+" : "-")+ string(1,bend_dir[1]); 
     } else if((tip[1] == 'z' && bend_dir[1] == 'y') || (tip[1] == 'y' && bend_dir[1] == 'z')) {
         return tip;
     } else if(tip[1] == bend_dir[1]) {
@@ -26,11 +26,9 @@ void printVector(vector<string> &v) {
 }
 
 void printDirection(vector<string> &v, string tip) {
-    //cout << "tip = " << tip << endl;
     for(int i = 0; i < v.size(); i++) {
         if(v[i] == "No") continue;
         tip = newDirection(tip,v[i]); 
-        //printf("tip = %s,bend dir = %s\n",tip.c_str(), v[i].c_str());
     }
     cout << tip << endl;
 }
