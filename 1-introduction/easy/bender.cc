@@ -4,6 +4,17 @@
 #include <vector>
 using namespace std;
 
+string newDirection(string tip,string bend_dir) {
+    if(tip[1] == 'x') {
+        return tip[0] == '+' ? bend_dir : "-" + string(1,bend_dir[1]); 
+    } else if((tip[1] == 'z' && bend_dir[1] == 'y') || (tip[1] == 'y' && bend_dir[1] == 'z')) {
+        return tip;
+    } else if(tip[1] == bend_dir[1]) {
+        return tip[0] == bend_dir[0] ? "-x" : "+x"; 
+    } 
+    return tip;
+}
+
 /* test input */
 void printVector(vector<string> &v) {
     cout << "[";
@@ -14,9 +25,19 @@ void printVector(vector<string> &v) {
     cout << "]\n";
 }
 
+void printDirection(vector<string> &v, string tip) {
+    //cout << "tip = " << tip << endl;
+    for(int i = 0; i < v.size(); i++) {
+        if(v[i] == "No") continue;
+        tip = newDirection(tip,v[i]); 
+        //printf("tip = %s,bend dir = %s\n",tip.c_str(), v[i].c_str());
+    }
+    cout << tip << endl;
+}
+
 int main(int argc, char *argv[]) {
-    if(argc < 2) { cerr << "enter an input file"; return -1; }
-    freopen(argv[1],"r",stdin);
+    //if(argc < 2) { cerr << "enter an input file"; return -1; }
+    //freopen(argv[1],"r",stdin);
     int L;
     string s;
     vector<string> v;
@@ -27,7 +48,7 @@ int main(int argc, char *argv[]) {
             cin >> s;
             v.push_back(s);
         }
-        printVector(v);
+        printDirection(v,"+x");
     }
     return 0;
 }
