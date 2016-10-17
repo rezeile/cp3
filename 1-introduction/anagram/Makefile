@@ -1,6 +1,6 @@
 CC= g++
 RM= rm -vf
-CPPFLAGS= -std=c++11 -Wall -g
+CPPFLAGS= -std=c++11 -g -Wall
 SRCFILES= ananagrams.cc
 OBJFILES= $(patsubst %.cc, %.o, $(SRCFILES))
 PROGFILES= $(patsubst %.cc, %, $(SRCFILES))
