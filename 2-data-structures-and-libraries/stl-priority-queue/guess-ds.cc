@@ -4,8 +4,8 @@
 #include <iostream>
 
 int main(int argc, char *argv[]) {
-    if(argc < 2) {std::cout << "enter an input file"; return 0;}
-    std::freopen(argv[1],"r",stdin);
+    //if(argc < 2) {std::cout << "enter an input file"; return 0;}
+    //std::freopen(argv[1],"r",stdin);
     int N, type, value;
     bool is_queue, is_pqueue, is_stack;
     while(scanf("%d",&N) != EOF) {
