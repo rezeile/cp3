@@ -14,41 +14,42 @@ void toLower(string &s) {
     }
 }
 
-class Compare {
-    public: 
+class Compare { 
+    public:
         bool operator() (string s1,string s2) {
-           if(s1.size() <= s2.size()) {
-               for(int i = 0; i < s1.size(); i++) {
-                    if(s1[i] < s2[i]) return true;
-               }
-           }
-           return false;
+            int size = s1.size() > s2.size() ? s1.size() : s2.size();
+            for(int i = 0; i < size; i++) {
+                if((tolower(s1[i]) == tolower(s2[i]) && s1[i] == s2[i])) continue;
+                else if(tolower(s1[i]) == tolower(s2[i])) return s1[i] < s2[i];
+                else return tolower(s1[i]) < tolower(s2[i]);
+            }
+            return false;
         }
 };
 
-set<string,Compare> printAllAnagramsHelper(string s) {
+void printAllAnagramsHelper(string s,set<string,Compare> &result) {
      // base case
-     if(s.empty()) { set<string,Compare> sset; return sset;}
-     char c = s[0];
-     set<string,Compare> rest = printAllAnagramsHelper(s.substr(1,s.size()));
-     if(rest.size() == 0) { rest.insert(s); return rest;}
-     
-     // otherwise
-     set<string,Compare> result;
-     string s1;
-     for(auto it = rest.begin(); it != rest.end(); it++) {
-         s1 = *it;
-         for(int i = 0; i <= s1.size(); i++) {
-            string s2 = s1.substr(0,i) + c  + s1.substr(i,s1.size());
-            result.insert(s2);
+     if(!s.empty()) {
+         char c = s[0];
+         set<string,Compare> rest;
+         printAllAnagramsHelper(s.substr(1,s.size()),rest);
+         if(rest.size() == 0) { rest.insert(s); result = rest; return;}
+         
+         // otherwise
+         string s1;
+         for(auto it = rest.begin(); it != rest.end(); it++) {
+             s1 = *it;
+             for(int i = 0; i <= s1.size(); i++) {
+                string s2 = s1.substr(0,i) + c  + s1.substr(i,s1.size());
+                result.insert(s2);
+             }
          }
      }
-     return result;
 }
 
-
 void printAllAnagrams(string s) {
-    set<string,Compare> anagrams = printAllAnagramsHelper(s);
+    set<string,Compare> anagrams; 
+    printAllAnagramsHelper(s,anagrams);
     for(auto i = anagrams.begin(); i != anagrams.end(); i++) 
         cout << *i << endl;
 }
