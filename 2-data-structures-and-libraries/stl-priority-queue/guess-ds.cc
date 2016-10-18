@@ -8,8 +8,7 @@ int main(int argc, char *argv[]) {
     std::freopen(argv[1],"r",stdin);
     int N, type, value;
     bool is_queue, is_pqueue, is_stack;
-    while(!std::cin.eof()) {
-        std::cin >> N;
+    while(scanf("%d",&N) != EOF) {
         std::stack<int> s;
         std::queue<int> q;
         std::priority_queue<int> pq;
@@ -18,12 +17,14 @@ int main(int argc, char *argv[]) {
             std::cin >> type >> value; 
             if(type == 1) { s.push(value); q.push(value); pq.push(value);}
             else {
-                if(s.top() != value) is_stack = false;
-                s.pop();   
-                if(q.front() != value) is_queue = false;
-                q.pop();
-                if(pq.top() != value) is_pqueue = false;
-                pq.pop();
+                if((!s.empty() && !q.empty()) && !pq.empty()) {
+                    if(s.top() != value) is_stack = false;
+                    s.pop();   
+                    if(q.front() != value) is_queue = false;
+                    q.pop();
+                    if(pq.top() != value) is_pqueue = false;
+                    pq.pop();
+                }
             }
         }
         if((is_stack && is_queue) || (is_stack && is_pqueue)) std::cout << "not sure\n";
