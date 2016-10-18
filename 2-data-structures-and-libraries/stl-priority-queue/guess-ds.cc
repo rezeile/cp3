@@ -24,6 +24,8 @@ int main(int argc, char *argv[]) {
                     q.pop();
                     if(pq.top() != value) is_pqueue = false;
                     pq.pop();
+                } else {
+                    is_stack = is_pqueue = is_queue = false;
                 }
             }
         }
