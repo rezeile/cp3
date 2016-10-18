@@ -1,7 +1,6 @@
 #include <vector>
 #include <cstdio>
 #include <iostream>
-//#include "../../util/testing.h" 
 using namespace std;
 
 int searchForCandidate(string s,int start, int end, char c) {
