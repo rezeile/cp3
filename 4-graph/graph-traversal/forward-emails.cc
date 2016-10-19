@@ -40,8 +40,8 @@ int emailMaximizer(graph &g) {
 }
 
 int main(int argc, char *argv[]) {
-    if(argc < 2) { cerr << "enter an input file"; return -1; }
-    freopen(argv[1],"r",stdin);
+    //if(argc < 2) { cerr << "enter an input file"; return -1; }
+    //freopen(argv[1],"r",stdin);
     int TC,N,u,v;
     cin >> TC;
     for(int i = 1; i <= TC; i++) {
