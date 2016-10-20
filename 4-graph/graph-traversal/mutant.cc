@@ -62,8 +62,8 @@ void endingPosition(string s,char dir,int sa,int sb,int N,int M,vbb &grid) {
 }
 
 int main(int argc, char *argv[]) {
-    if(argc < 2) { cerr << "enter an input file"; return -1; }
-    freopen(argv[1],"r",stdin);
+    //if(argc < 2) { cerr << "enter an input file"; return -1; }
+    //freopen(argv[1],"r",stdin);
     int start_a,start_b,N,M; 
     char dir;
     string s;
