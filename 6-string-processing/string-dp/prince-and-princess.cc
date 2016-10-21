@@ -1,6 +1,7 @@
 /*
  * This problem is basically a variant of the Longest Common Subsequence
- * Problem.
+ * Problem. However the O(mn) solution to the longest common subsequence
+ * would take too long in this case.
  */
 
 #include <iostream>
@@ -8,29 +9,24 @@
 #include <vector>
 #include <unordered_set>
 #include <algorithm>
+#include <deque>
 using namespace std;
 
 typedef vector<int> vi;
 typedef vector<vector<int>> mtx;
 
-void lisHelper(vi &v,vi &L,int j) {
-    // know that v and L > 1 
-    if(v[j] > v[j-1]) {
-        L[j] = L[j-1] + 1;
-    } else {
-        int max = 1;
-        for(int i = j-1; i >= 0; i--) {
-            if(v[j] > v[i] && (L[i] + 1 > max)) max = L[i] + 1;    
-        }
-        L[j] = max;
-    }
-}
-
 int longestIncreasingSubsequence(vector<int> &v) {
     if(v.size() <= 1) return v.size();
-    // let V[i] be the longest increasing subsequence (LIS) ending at index i
-    vector<int> L(v.size(),1);
-    lisHelper(v,L,v.size() - 1);
+    // let L[i] be the smallest value of a length i LIS
+    int pos = 0;
+    deque<int> L;
+    for(int i = 0; i < v.size(); i++) {
+        pos = (lower_bound(L.begin(),L.end(),v[i]) - L.begin());
+        if(pos <= 0 && L.size() == 0) L.push_front(v[i]);
+        else if(pos >= L.size()) L.push_back(v[i]);
+        else if(L[pos] > v[i]) L[pos] = v[i];
+    }
+    return L.size();
 }
 
 int longestRoute(vector<int> &prince, vector<int> &princess,int n) {
@@ -41,10 +37,7 @@ int longestRoute(vector<int> &prince, vector<int> &princess,int n) {
         int val = prince[i];
         if(s.find(val) != s.end()) v[val] = i;
     }
-    for(int i = 0; i < v.size(); i++) 
-        if(v[i] != -1) cout << i << " ";
     return longestIncreasingSubsequence(v);
-    return 0;
 }
 
 int main(int argc, char *argv[]) {
