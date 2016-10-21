@@ -6,34 +6,45 @@
 #include <iostream>
 #include <cstdio>
 #include <vector>
+#include <unordered_set>
 #include <algorithm>
 using namespace std;
 
 typedef vector<int> vi;
 typedef vector<vector<int>> mtx;
 
-int longestRouteHelper(vi &prince,vi &princess,int pce,int pcess, mtx &m) {
-    if(pce <= 0  || pcess <= 0) return 0;
-    // both have atleast a single element
-    if(prince[pce] == princess[pcess]) {
-        if(m[pce][pcess] == 0) 
-            m[pce][pcess] = 1 + longestRouteHelper(prince,princess,pce - 1,pcess-1,m);
-        return 1 + m[pce-1][pcess-1];
+void lisHelper(vi &v,vi &L,int j) {
+    // know that v and L > 1 
+    if(v[j] > v[j-1]) {
+        L[j] = L[j-1] + 1;
     } else {
-        int max_1,max_2;
-        if(m[pce][pcess-1] == 0) 
-            max_1 = m[pce][pcess-1] = longestRouteHelper(prince,princess,pce,pcess-1,m);
-        if(m[pce-1][pcess] == 0)
-            max_2 = m[pce-1][pcess] = longestRouteHelper(prince,princess,pce-1,pcess,m);
-        return max(max_1,max_2);
+        int max = 1;
+        for(int i = j-1; i >= 0; i--) {
+            if(v[j] > v[i] && (L[i] + 1 > max)) max = L[i] + 1;    
+        }
+        L[j] = max;
     }
 }
 
-int longestRoute(vector<int> &prince, vector<int> &princess) {
-    // let r denote row and c column
-    int r = prince.size(), c = princess.size();
-    mtx m(r,vector<int>(c,0));
-    return longestRouteHelper(prince,princess,r-1,c-1,m);
+int longestIncreasingSubsequence(vector<int> &v) {
+    if(v.size() <= 1) return v.size();
+    // let V[i] be the longest increasing subsequence (LIS) ending at index i
+    vector<int> L(v.size(),1);
+    lisHelper(v,L,v.size() - 1);
+}
+
+int longestRoute(vector<int> &prince, vector<int> &princess,int n) {
+    int MAX = n * n;
+    vector<int> v(MAX + 1,-1);
+    unordered_set<int> s(princess.begin(),princess.end());
+    for(int i = 1; i <= prince.size(); i++) {
+        int val = prince[i];
+        if(s.find(val) != s.end()) v[val] = i;
+    }
+    for(int i = 0; i < v.size(); i++) 
+        if(v[i] != -1) cout << i << " ";
+    return longestIncreasingSubsequence(v);
+    return 0;
 }
 
 int main(int argc, char *argv[]) {
@@ -45,9 +56,9 @@ int main(int argc, char *argv[]) {
     for(int i = 1; i <= TC; i++) {
         cin >> n >> p >> q;
         prince.resize(p + 1); princess.resize(q + 1);
-        for(int j = 0; j <= p; j++) cin >> prince[j];
-        for(int k = 0; k <= q; k++) cin >> princess[k];
-        printf("Case %d: %d\n",i,longestRoute(prince,princess));
+        for(int j = 0; j < p + 1; j++) cin >> prince[j];
+        for(int k = 0; k < q + 1; k++) cin >> princess[k];
+        printf("Case %d: %d\n",i,longestRoute(prince,princess,n));
     }
     return 0;
 }
