@@ -41,8 +41,8 @@ int longestRoute(vector<int> &prince, vector<int> &princess,int n) {
 }
 
 int main(int argc, char *argv[]) {
-    if(argc < 2) { cerr << "enter an input file"; return -1; }
-    freopen(argv[1],"r",stdin);
+    //if(argc < 2) { cerr << "enter an input file"; return -1; }
+    //freopen(argv[1],"r",stdin);
     int TC,n,p,q;
     cin >> TC;
     vector<int> prince,princess;
