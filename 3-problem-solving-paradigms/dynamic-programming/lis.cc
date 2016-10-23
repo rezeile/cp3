@@ -6,8 +6,9 @@
  * increasing subsequence of the array rather than simply
  * the length of the longest increasing subsequence.
  *
- * The following implementation uses bottom-up (i.e. true 
- * Dynamic Programming)
+ * The following file includes both the O(n^2) implementation
+ * and the much faster O(nlog(n)) implementation of the 
+ * longest increasing subsequence problem.
  *
  * Author: Eliezer Abate
  * Last Updated October 3 2016
@@ -19,6 +20,8 @@
 #include <vector>
 #include <iterator>
 #include <set>
+#include <deque>
+#include <algorithm>
 using namespace std;
 typedef vector<int> si;
 
@@ -32,21 +35,16 @@ void printResult(int size, Container begin,Container end) {
     }
 }
 
-void greedyLIS(vector<int> &v) {
-    if(v.size() == 0) return;
-    set<int> current_best; current_best.insert(v[0]);
-    set<int> overall_best = current_best;
-    int N = v.size();
-    set<int>::iterator it;
-    for(int i = 1; i < N; i++) {
-        it = current_best.lower_bound(v[i]);
-        if(it != current_best.end()) {
-            current_best.erase(it,current_best.end());
-        } 
-        current_best.insert(v[i]);
-        if(current_best.size() >= overall_best.size()) overall_best = current_best;
+void greedyLIS(vector<int> &V) {
+    if(V.size() == 0) return;
+    deque<int> L;
+    for(int i = 0; i < V.size(); i++) {
+       int pos = lower_bound(L.begin(),L.end(),V[i]) - L.begin(); 
+       if(pos <= 0 && L.size() == 0) L.push_front(V[i]);
+       else if(pos >= L.size()) L.push_back(V[i]);
+       else if(L[pos] > V[i]) L[pos] = V[i];
     }
-    printResult(overall_best.size(),overall_best.begin(),overall_best.end());
+    printf("%lu\n-\n",L.size());
 }
 
 void printLongestIncreasingSubsequence(vector<int> &v) {
@@ -67,11 +65,6 @@ void printLongestIncreasingSubsequence(vector<int> &v) {
     }
     vector<int> lis = subseq[max_index];
     printResult(lis.size(),lis.begin(),lis.end());
-    /*cout << lis.size() << endl;
-    cout << "-" << endl;
-    for(int i = 0; i < lis.size(); i++) {
-        cout << lis[i] << endl;
-    }*/
 } 
 
 
