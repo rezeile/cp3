@@ -30,13 +30,13 @@ class Compare {
         }
 } mycmp;
 
-void printAllAnagramsHelper(string s,vector<string> &result) {
+void printAllAnagramsHelper(string s,set<string,Compare> &result) {
      // base case
      if(!s.empty()) {
          char c = s[0];
-         vector<string> rest;
+         set<string,Compare> rest;
          printAllAnagramsHelper(s.substr(1,s.size()),rest);
-         if(rest.size() == 0) { rest.push_back(s); result = rest; return;}
+         if(rest.size() == 0) { rest.insert(s); result = rest; return;}
          
          // otherwise
          string s1;
@@ -44,16 +44,15 @@ void printAllAnagramsHelper(string s,vector<string> &result) {
              s1 = *it;
              for(int i = 0; i <= s1.size(); i++) {
                 string s2 = s1.substr(0,i) + c  + s1.substr(i,s1.size());
-                result.push_back(s2);
+                result.insert(s2);
              }
          }
      }
 }
 
 void printAllAnagrams(string s) {
-    vector<string> anagrams; 
+    set<string,Compare> anagrams; 
     printAllAnagramsHelper(s,anagrams);
-    sort(anagrams.begin(),anagrams.end(),mycmp);
     for(auto i = anagrams.begin(); i != anagrams.end(); i++) 
         cout << *i << endl;
 }
