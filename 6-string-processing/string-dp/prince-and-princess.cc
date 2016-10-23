@@ -16,7 +16,7 @@ typedef vector<int> vi;
 typedef vector<vector<int>> mtx;
 
 int longestIncreasingSubsequence(vector<int> &v) {
-    if(v.size() <= 1) return v.size();
+    //if(v.size() <= 1) return v.size();
     // let L[i] be the smallest value of a length i LIS
     int pos = 0;
     deque<int> L;
@@ -31,18 +31,23 @@ int longestIncreasingSubsequence(vector<int> &v) {
 
 int longestRoute(vector<int> &prince, vector<int> &princess,int n) {
     int MAX = n * n;
-    vector<int> v(MAX + 1,-1);
+    vector<int> v(MAX + 1,1);
     unordered_set<int> s(princess.begin(),princess.end());
-    for(int i = 1; i <= prince.size(); i++) {
+    for(int i = 0; i < prince.size(); i++) {
         int val = prince[i];
-        if(s.find(val) != s.end()) v[val] = i;
+        if(s.find(val) != s.end()) {
+            printf("val = %d\n",val);
+            v[val] = i + 1;
+        }
     }
+    for(auto i : v) cout << i << " ";
+    cout << endl;
     return longestIncreasingSubsequence(v);
 }
 
 int main(int argc, char *argv[]) {
-    //if(argc < 2) { cerr << "enter an input file"; return -1; }
-    //freopen(argv[1],"r",stdin);
+    if(argc < 2) { cerr << "enter an input file"; return -1; }
+    freopen(argv[1],"r",stdin);
     int TC,n,p,q;
     cin >> TC;
     vector<int> prince,princess;
