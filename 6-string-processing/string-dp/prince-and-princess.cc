@@ -10,14 +10,13 @@
 #include <unordered_set>
 #include <algorithm>
 #include <deque>
+#include <utility>
 using namespace std;
 
 typedef vector<int> vi;
 typedef vector<vector<int>> mtx;
 
 int longestIncreasingSubsequence(vector<int> &v) {
-    //if(v.size() <= 1) return v.size();
-    // let L[i] be the smallest value of a length i LIS
     int pos = 0;
     deque<int> L;
     for(int i = 0; i < v.size(); i++) {
@@ -31,18 +30,28 @@ int longestIncreasingSubsequence(vector<int> &v) {
 
 int longestRoute(vector<int> &prince, vector<int> &princess,int n) {
     int MAX = n * n;
-    vector<int> v(MAX + 1,1);
+    vector<int> v1(MAX + 1,1);
+    vector<int> v2(MAX + 1,1);
     unordered_set<int> s(princess.begin(),princess.end());
+    // check prince order
+    int order = 1;
     for(int i = 0; i < prince.size(); i++) {
         int val = prince[i];
         if(s.find(val) != s.end()) {
-            printf("val = %d\n",val);
-            v[val] = i + 1;
+            v1[val] = order++;
         }
     }
-    for(auto i : v) cout << i << " ";
-    cout << endl;
-    return longestIncreasingSubsequence(v);
+    bool usePrinceMap = false;
+    order = 1;
+    for(int i = 0; i < princess.size(); i++) {
+        int val = princess[i];
+        if(v1[val] > 1) { // if this value exists in prince
+            if(!usePrinceMap && v1[val] != order) usePrinceMap = true;
+            v2[val] = usePrinceMap ? order : v1[val];
+        }
+        order += 1;
+    }
+    return longestIncreasingSubsequence(v2);
 }
 
 int main(int argc, char *argv[]) {
