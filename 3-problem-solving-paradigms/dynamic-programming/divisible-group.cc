@@ -3,19 +3,34 @@
 #include <string>
 #include <vector>
 #include <numeric>
+#include <climits>
+#include <unordered_set>
+#include <unordered_map>
+#include <utility>
 using namespace std;
 
-typedef vector<vector<long long>> table;
+typedef long long ll;
 
-void helper(int index,int D,int M,vector<int> &v,int elems,long long &count,int sum) {
+#define MAX_N 200 + 1
+#define MAX_M 10 + 1
+
+ll memo[MAX_N][MAX_M][MAX_M];
+
+void helper(int index,int D,int M,vector<int> &v,int elems,long long &count,long long  sum) {
    if(index > v.size() || elems > M) return;
-   if(elems == M) {count += sum % D ? 0 : 1; return;}
+   if(sum % D == 0) {
+        memo[index][elems][D] = sum;
+        if(elems == M) count += 1; return; 
+   }        
    // take it
+   // can I condense the following two calls into a single one? 
+
    helper(index+1,D,M,v,elems+1,count,sum + v[index]);
    // leave it
    helper(index+1,D,M,v,elems,count,sum);
 }
 
+// can I try bottom up dynamic programming ? 
 long long DGS(vector<int> &v,int D,int M) {
     long long count = 0;
     int sum = 0;
@@ -36,6 +51,7 @@ int main(int argc, char *argv[]) {
         vector<int> iv; iv.resize(N);
         for(int i = 0; i < N; i++) cin >> iv[i];
         printf("SET %d:\n",cnt++);
+        memset(memo,-1,sizeof memo);
         for(int j = 1; j <= Q; j++) {
            cin >> D >> M;
            printf("QUERY %d: %lld\n",j,DGS(iv,D,M));
