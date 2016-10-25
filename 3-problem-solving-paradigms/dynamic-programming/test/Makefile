@@ -1,7 +1,7 @@
 CC= g++
 RM= rm -vf
 CPPFLAGS= -std=c++11 -Wall -g
-SRCFILES= divisible-group.cc lis.cc max-sum.cc  the-jackpot.cc 
+SRCFILES= divisible.cc 
 OBJFILES= $(patsubst %.cc, %.o, $(SRCFILES))
 PROGFILES= $(patsubst %.cc, %, $(SRCFILES))
 SYMFILES=$(patsubst %.cc, %.dSYM, $(SRCFILES))

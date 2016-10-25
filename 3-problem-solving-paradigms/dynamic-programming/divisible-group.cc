@@ -7,35 +7,20 @@ using namespace std;
 
 typedef vector<vector<long long>> table;
 
-long long bC(int N, int M,table &t) {
-    if(N == M) return 1;
-    if(N == 1 || M == 0) return 1;
-    if(t[N][M] == -1) t[N][M] = bC(N-1,M,t) + bC(N-1,M-1,t);
-    return t[N][M];
+void helper(int index,int D,int M,vector<int> &v,int elems,long long &count,int sum) {
+   if(index > v.size() || elems > M) return;
+   if(elems == M) {count += sum % D ? 0 : 1; return;}
+   // take it
+   helper(index+1,D,M,v,elems+1,count,sum + v[index]);
+   // leave it
+   helper(index+1,D,M,v,elems,count,sum);
 }
 
-void helper(int index,long long D,int M,vector<int> &m_vec,vector<int> &v,int count) {
-    if(index > v.size() || m_vec.size() > M) return;
-    if(m_vec.size() == M) {
-        long long sum = accumulate(m_vec.begin(),m_vec.end(),0);
-        printf("sum(%lld) mod D(%lld) = %lld",sum,D,(sum % D));
-        cout << (sum % D ? 1 : 0) << endl;
-        count += (sum % D ? 1 : 0);
-        return;
-    } 
-    m_vec.push_back(v[index]);
-    helper(index+1,D,M,m_vec,v,count);
-    m_vec.pop_back();
-}
-
-long long DGS(vector<int> &v,long long D,int M) {
-    if(v.size() == 0 || M > v.size()) return 0;
-    vector<int> m_vec;
-    int count = 0;
-    for(int i = 0; i < v.size(); i++) {
-        m_vec.clear();
-        helper(i,D,M,m_vec,v,count);
-    }
+long long DGS(vector<int> &v,int D,int M) {
+    long long count = 0;
+    int sum = 0;
+    int elems = 0;
+    helper(0,D,M,v,elems,count,sum);
     return count;
 }
 
