@@ -9,8 +9,6 @@ using namespace std;
 
 typedef vector<vector<int>> table;
 
-table t;// global
-
 bool luggageFitsHelper(int i,vector<int> &v,int remW) {
    if(remW == 0) return true;
    if(i < v.size()) {
