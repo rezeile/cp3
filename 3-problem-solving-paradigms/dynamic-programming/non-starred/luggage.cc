@@ -23,15 +23,14 @@ void luggageFits(vector<int> &v) {
     int sum = accumulate(v.begin(),v.end(),0);
     if(sum % 2) cout << "NO\n";
     else {
-        t.assign(v.size(),vector<int>(sum/2));
         if(luggageFitsHelper(0,v,sum/2)) cout << "YES\n";
         else cout << "NO\n";
     }
 }
 
 int main(int argc, char *argv[]) {
-    if(argc < 2) { cerr << "enter an input file"; return -1; }
-    freopen(argv[1],"r",stdin);
+    //if(argc < 2) { cerr << "enter an input file"; return -1; }
+    //freopen(argv[1],"r",stdin);
     int TC;
     string s;
     getline(cin,s);
