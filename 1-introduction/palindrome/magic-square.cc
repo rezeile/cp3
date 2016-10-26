@@ -6,14 +6,13 @@
 #include <vector>
 #include <cmath>
 #include <unordered_set>
+#include <cctype>
 using namespace std;
-
-unordered_set<char> punc = {'?','(',')','!','.',',',' '};
 
 void replaceExtraChars(string &s) {
     string ns = "";
     for(int i = 0; i < s.size(); i++) {
-        if(punc.find(s[i]) == punc.end()) ns += s[i];
+        if(isalpha(s[i])) ns += s[i];
     }
     s = ns;
 }
@@ -29,10 +28,15 @@ bool isMagicSquare(vector<vector<char>> &mtx,int D) {
     if(D < 0 || D > mtx.size()) return false;
     if(D <= 1) return true;
     int start = (mtx.size() - D) / 2;
-    // check opposite corners 
-    if(mtx[start][start] != mtx[start + (D-1)][start + (D-1)]) return false;
-    if(mtx[start+(D-1)][start] != mtx[start][start+(D-1)]) return false;
-    // recur
+    int end = start+(D-1);
+    // check top and bottom rows
+    for(int i = 0; i < D; i++) {
+        if(mtx[start][start + i] != mtx[end][end-i]) return false;
+    }
+    // check left and right colummns
+    for(int i = 1; i < (D-1); i++) {
+        if(mtx[start+i][start] != mtx[end-i][end]) return false;
+    }
     return isMagicSquare(mtx,D-2);
 }
 
@@ -46,14 +50,13 @@ void magicSquare(string &s) {
     for(int i = 0; i < D; i++)
         for(int j = 0; j < D; j++)
             mtx[i][j] = s[s_length++];
-    //printMagicSquare(mtx,D);
     if(isMagicSquare(mtx,(int) sq_root)) printf("%d\n",(int) sq_root);
     else printf("No magic :(\n");
 }
 
 int main(int argc, char *argv[]) {
-    //if(argc < 2) { cerr << "enter an input file"; return -1; }
-    //freopen(argv[1],"r",stdin);
+    if(argc < 2) { cerr << "enter an input file"; return -1; }
+    freopen(argv[1],"r",stdin);
     string T;
     getline(cin,T);
     stringstream ss(T);
