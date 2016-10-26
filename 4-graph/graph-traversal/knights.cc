@@ -11,12 +11,11 @@ typedef vector<vi> mtx;
 typedef vector<pair<int,int>> vii;
 typedef set<pair<int,int>> sii;
 
-#define UNVISITED -1
-#define EVEN 0
-#define ODD 1 
-#define DFS_YES 1
-#define DFS_NO -1
+#define DFS_WHITE -1
+#define DFS_GRAY 0
+#define DFS_BLACK 1
 #define not_water_cell(x,y) wc.find(make_pair(x,y)) == wc.end()
+
 vii validNextJumps(int cx,int cy,int R,int C,int M,int N,sii &wc) {
     // Right Up
     vii next_jumps;
@@ -35,29 +34,26 @@ vii validNextJumps(int cx,int cy,int R,int C,int M,int N,sii &wc) {
 }
 
 void dfsHelper(int i,int j,int M,int N,mtx &dfs_start,mtx &tracker,sii &wc) {
-    dfs_start[i][j] = DFS_YES;
-    for(auto vj: validNextJumps(i,j,dfs_start.size(),dfs_start[0].size(),M,N,wc)) {
-        // if UNVISITED mark as odd 
+   dfs_start[i][j] = DFS_GRAY;
+   for(auto vj: validNextJumps(i,j,dfs_start.size(),dfs_start[0].size(),M,N,wc)) {
         int x = vj.first;
         int y = vj.second;
-        if(tracker[x][y] == UNVISITED)
-            tracker[x][y] = ODD;
-        else if(tracker[x][y] == ODD)
-            tracker[x][y] = EVEN;
-        else 
-            tracker[x][y] = ODD;
-        if(dfs_start[x][y] != DFS_YES) {
+        tracker[x][y]++;
+        printf("(%d,%d)\n",x,y);
+        if(dfs_start[x][y] == DFS_WHITE) {
             dfsHelper(x,y,M,N,dfs_start,tracker,wc);
         }
    }
+   dfs_start[i][j] = DFS_BLACK;
 }
 
 void printResults(mtx &tracker) {
     int even = 0, odd = 0;
     for(int i = 0; i < tracker.size(); i++) {
         for(int j = 0; j < tracker[0].size(); j++) {
-            if(tracker[i][j] == EVEN) even++;
-            if(tracker[i][j] == ODD) odd++;
+            if(tracker[i][j] > 0){
+                tracker[i][j] % 2 == 0 ?  even++ : odd++;
+            }
         }
     }
     printf("%d %d\n",even,odd);
@@ -65,11 +61,11 @@ void printResults(mtx &tracker) {
 
 void findGridCells(int R,int C,int M,int N,sii &wc) { // wc -> water cells
    vii next_jumps = validNextJumps(0,0,R,C,M,N,wc);
-   mtx dfs_start(R,vi(C,DFS_NO));
-   mtx tracker(R,vi(C,UNVISITED));
+   mtx dfs_start(R,vi(C,DFS_WHITE));
+   mtx tracker(R,vi(C,0));
    for(int i = 0; i < R; i++) {
        for(int j = 0; j < C; j++) {
-            if(dfs_start[i][j] == DFS_NO && not_water_cell(i,j)) {
+            if(dfs_start[i][j] == DFS_WHITE && not_water_cell(i,j)) {
                 dfsHelper(i,j,M,N,dfs_start,tracker,wc);
             }
        }
