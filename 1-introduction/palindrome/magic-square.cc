@@ -4,7 +4,7 @@
 using namespace std;
 
 void magicSquare(string s) {
-
+    printf("No magic :(\n");
 }
 
 int main(int argc, char *argv[]) {
@@ -15,6 +15,7 @@ int main(int argc, char *argv[]) {
     string s;  // length(s) < 10K
     for(int i = 0; i < TC; i++) {
         getline(cin,s);
+        printf("Case #%d:\n",i+1);
         magicSquare(s);
     }
     return 0;
