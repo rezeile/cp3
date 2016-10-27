@@ -3,11 +3,51 @@
 #include <string>
 #include <sstream>
 #include <vector>
+#include <queue>
 using namespace std;
 
 typedef vector<vector<int>> graph;
 
+#define DFS_WHITE -1
+#define DFS_GRAY 0
+#define DFS_BLACK 1
+
+vector<int> visited;
+vector<bool> reachable;
+
+void dfs(int vertex,graph &g) {
+    visited[vertex] = DFS_GRAY;
+    for(int i = 0; i < g[vertex].size(); i++) {
+        int neighbor = g[vertex][i];
+        reachable[neighbor] = true;
+        if(visited[neighbor] == DFS_WHITE) {
+            dfs(neighbor,g);
+        }
+    }
+    visited[vertex] = DFS_BLACK;
+}
+
+void printUnreachable() {
+    vector<int> items;
+    int count  = 0;
+    for(int i = 1; i < reachable.size(); i++) {
+        if(!reachable[i])  { items.push_back(i); count++; }
+    }
+    printf("%d ",count);
+    for(int i = 0; i < items.size(); i++) {
+        if(i != items.size() -1) printf("%d ",items[i]);
+        else printf("%d",items[i]);
+    }
+    printf("\n");
+}
+
 void findUnreachable(graph &g, vector<int> &sv) {
+    for(auto vertex : sv) {
+        visited.assign(g.size(),DFS_WHITE);
+        reachable.assign(g.size(),false);
+        dfs(vertex,g);
+        printUnreachable();
+    }
 }
 
 int main(int argc, char *argv[]) {
