@@ -8,7 +8,6 @@ using namespace std;
 typedef vector<vector<int>> graph;
 
 void findUnreachable(graph &g, vector<int> &sv) {
-
 }
 
 int main(int argc, char *argv[]) {
@@ -23,6 +22,7 @@ int main(int argc, char *argv[]) {
         string adj_list;
         while(getline(cin,adj_list)) {
             if(stoi(adj_list) == 0) break;
+            stringstream ss;
             ss << adj_list;
             ss >> vertex;
             int neighbor;
@@ -41,7 +41,7 @@ int main(int argc, char *argv[]) {
             ss >> val;
             sv.push_back(val);
         }
-        findUnreachable(g,sv);
+       findUnreachable(g,sv);
     }
     return 0;
 }
