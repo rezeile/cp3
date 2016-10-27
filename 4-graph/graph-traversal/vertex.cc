@@ -16,6 +16,7 @@ vector<int> visited;
 vector<bool> reachable;
 
 void dfs(int vertex,graph &g) {
+    if(g.empty()) return;
     visited[vertex] = DFS_GRAY;
     for(int i = 0; i < g[vertex].size(); i++) {
         int neighbor = g[vertex][i];
@@ -33,7 +34,8 @@ void printUnreachable() {
     for(int i = 1; i < reachable.size(); i++) {
         if(!reachable[i])  { items.push_back(i); count++; }
     }
-    printf("%d ",count);
+    if(count) printf("%d ",count);
+    else printf("%d",count);
     for(int i = 0; i < items.size(); i++) {
         if(i != items.size() -1) printf("%d ",items[i]);
         else printf("%d",items[i]);
@@ -51,8 +53,8 @@ void findUnreachable(graph &g, vector<int> &sv) {
 }
 
 int main(int argc, char *argv[]) {
-    if(argc < 2) { cerr << "enter an input file"; return -1; }
-    freopen(argv[1],"r",stdin);
+    //if(argc < 2) { cerr << "enter an input file"; return -1; }
+    //freopen(argv[1],"r",stdin);
     int N,vertex;
     string input;
     stringstream ss;
@@ -72,16 +74,17 @@ int main(int argc, char *argv[]) {
             }
         }
         vector<int> sv; // start vertices
-        string start;
-        getline(cin,start);
-        ss << start;
-        ss >> N;
-        for(int i = 0; i < N; i++) {
+        string query;
+        getline(cin,query);
+        stringstream ss(query);
+        int query_length;
+        ss >> query_length;
+        for(int i = 0; i < query_length; i++) {
             int val;
             ss >> val;
             sv.push_back(val);
         }
-       findUnreachable(g,sv);
+        findUnreachable(g,sv);
     }
     return 0;
 }
