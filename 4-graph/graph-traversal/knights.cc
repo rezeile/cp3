@@ -38,9 +38,8 @@ void dfsHelper(int i,int j,int M,int N,mtx &dfs_start,mtx &tracker,sii &wc) {
    for(auto vj: validNextJumps(i,j,dfs_start.size(),dfs_start[0].size(),M,N,wc)) {
         int x = vj.first;
         int y = vj.second;
-        tracker[x][y]++;
-        printf("(%d,%d)\n",x,y);
         if(dfs_start[x][y] == DFS_WHITE) {
+            tracker[x][y]++;
             dfsHelper(x,y,M,N,dfs_start,tracker,wc);
         }
    }
