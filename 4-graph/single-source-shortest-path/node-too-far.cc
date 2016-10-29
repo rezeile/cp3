@@ -12,19 +12,9 @@ using namespace std;
 
 typedef map<int,vector<pair<int,int>>> graph;
 
-int case_cnt = 1;
-
 map<int,bool> visited;
 
-
-
-/*** HELPER FUNCTIONS ****/
-
-void clearVisited() {
-    for(auto it = visited.begin(); it != visited.end(); it++) {
-        it->second = false;
-    }
-}
+int case_cnt = 1;
 
 void printAList(graph &g) {
     for(auto nodes: g) {
