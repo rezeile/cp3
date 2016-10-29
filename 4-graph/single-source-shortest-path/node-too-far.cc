@@ -9,10 +9,13 @@
 using namespace std;
 
 #define INF 1000000000
+#define DFS_WHITE -1
+#define DFS_GRAY 0
+#define DFS_BLACK 1
 
 typedef map<int,vector<pair<int,int>>> graph;
 
-map<int,bool> visited;
+map<int,int> visited;
 
 int case_cnt = 1;
 
@@ -56,17 +59,39 @@ void insertTTL(vector<pair<int,int>> &v ) {
     }
 }
 
-
 /*** SOLUTION FUNCTIONS  ***/
-void bfs(int node,int TTL,graph &g,int &unreachable) {
+void bfs(int node,int TTL,graph &g,int &reach) {
+   for(auto nd: g)
+       visited.insert(make_pair(nd.first,DFS_WHITE));
+   
+   queue<pair<int,int>> q;
+   visited[node] = DFS_GRAY;
+   q.push(make_pair(node,TTL));
 
+   while(!q.empty()) {
+       int front = q.front().first;
+       int ttl = q.front().second;
+       if(g.find(front) == g.end()) { q.pop(); continue; }
+       if(ttl >= 0) reach++;
+       vector<pair<int,int>> neighbors = g[front];q.pop();
+       for(auto n: neighbors) {
+            if(visited[n.first] == DFS_WHITE) { 
+                visited[n.first] = DFS_GRAY;q.push(make_pair(n.first,ttl-1));
+            } 
+       }
+       visited[front] = DFS_BLACK;
+   }
 }
 
 void testTTLReachability(graph &g,vector<pair<int,int>> &v) {
-
+    for(auto data: v) {
+        int reach = 0;
+        visited.clear(); bfs(data.first,data.second,g,reach);
+        printf("Case %d: %lu nodes not reachable from node %d with TTL = %d.\n",case_cnt++,g.size()-reach,data.first,data.second);
+    }
 }
 
-/*** MAIN ***/
+/*** *** *** *** *** MAIN *** *** *** *** ***/
 int main(int argc, char *argv[]) {
     if(argc < 2) { cerr << "enter an input file"; return -1; }
     freopen(argv[1],"r",stdin);
@@ -80,8 +105,8 @@ int main(int argc, char *argv[]) {
         insertNetwork(g,NC);
         vector<pair<int,int>> v;
         insertTTL(v); 
-        printAList(g);
-        //testTTLReachability(g,v);
+        //printAList(g);
+        testTTLReachability(g,v);
     }
     return 0;
 }
