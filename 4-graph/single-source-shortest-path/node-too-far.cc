@@ -93,8 +93,8 @@ void testTTLReachability(graph &g,vector<pair<int,int>> &v) {
 
 /*** *** *** *** *** MAIN *** *** *** *** ***/
 int main(int argc, char *argv[]) {
-    if(argc < 2) { cerr << "enter an input file"; return -1; }
-    freopen(argv[1],"r",stdin);
+    //if(argc < 2) { cerr << "enter an input file"; return -1; }
+    //freopen(argv[1],"r",stdin);
     string input;
     int NC;
     while(getline(cin,input)) {
