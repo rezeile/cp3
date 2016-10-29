@@ -1,3 +1,6 @@
+#ifndef __INCLUDE_H
+#define __INCLUDE_H
+
 #include <cstdio>
 #include <iostream>
 #include <vector>
@@ -15,10 +18,4 @@
 #include <algorithm>
 using namespace std;
 
-int main(int argc, char *argv[]) {
-    if(argc < 2) { cerr << "enter an input file"; return -1; }
-    freopen(argv[1],"r",stdin);
-    string input;
-    stringstream ss;
-    return 0;
-}
+#endif
