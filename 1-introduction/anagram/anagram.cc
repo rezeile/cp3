@@ -9,54 +9,26 @@
 #include <utility>
 using namespace std;
 
-void toLower(string &s) {
-    for(int i = 0; i < s.size(); i++) {
-        s[i] = tolower(s[i]);
-    }
-}
-
 class Compare { 
     public:
-        bool operator() (string s1,string s2) {
-            int s1_size = s1.size();
-            int s2_size = s2.size();
-            int size = s1_size > s2_size ? s1_size : s2_size;
-            for(int i = 0; i < size; i++) {
-                if((tolower(s1[i]) == tolower(s2[i]) && s1[i] == s2[i])) continue;
-                else if(tolower(s1[i]) == tolower(s2[i])) return s1[i] < s2[i];
-                else return tolower(s1[i]) < tolower(s2[i]);
-            }
-            return false;
+        bool operator() (char c1,char c2) {
+            // same case, same letters
+            if(c1 == c2) return false; 
+            // diff case, same letters
+            else if(tolower(c1) == tolower(c2)) return  c1 < c2;    
+            // same case, diff letters
+            else if((isupper(c1) && isupper(c2)) || (islower(c1) && islower(c2))) return c1 < c2;
+            // diff case, diff letters
+            return tolower(c1) < tolower(c2);
         }
-} mycmp;
-
-void printAllAnagramsHelper(string s,set<string,Compare> &result) {
-     // base case
-     if(!s.empty()) {
-         char c = s[0];
-         set<string,Compare> rest;
-         printAllAnagramsHelper(s.substr(1,s.size()),rest);
-         if(rest.size() == 0) { rest.insert(s); result = rest; return;}
-         
-         // otherwise
-         string s1;
-         for(auto it = rest.begin(); it != rest.end(); it++) {
-             s1 = *it;
-             for(int i = 0; i <= s1.size(); i++) {
-                string s2 = s1.substr(0,i) + c  + s1.substr(i,s1.size());
-                result.insert(s2);
-             }
-         }
-     }
-}
+}mycmp;
 
 void printAllAnagrams(string s) {
-    set<string,Compare> anagrams; 
-    printAllAnagramsHelper(s,anagrams);
-    for(auto i = anagrams.begin(); i != anagrams.end(); i++) 
-        cout << *i << endl;
+    // reset to lexicographically first permutation
+    while(next_permutation(s.begin(),s.end(),mycmp)) {}
+    cout << s << endl;
+    while(next_permutation(s.begin(),s.end(),mycmp)) printf("%s\n",s.c_str());
 }
-
 int main(int argc, char *argv[]) {
     //if(argc < 2) { cerr << "enter an input file"; return -1; }
     //freopen(argv[1],"r",stdin);
