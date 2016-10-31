@@ -23,39 +23,22 @@ void dfs(int vertex,graph &g,int &max,int source) {
 void dfsIterative(int vertex,graph &g,int &max, int source) {
     stack<int> s;
     s.push(vertex);
-    visited[vertex] = true;
-    max += 1;
-    max_source[vertex] = source;
+    int top = vertex;
     while(!s.empty()) {
-        int top = s.top();
+        top = s.top();
+        visited[top] = true;
+        max_source[top] = source;
+        max += 1;
         s.pop();
-        if(!visited[g[top]]){
-           visited[g[top]] = true;
-           max += 1;
-           max_source[g[top]] = source;
-           s.push(g[top]); 
-        }
+        if(!visited[g[top]]) s.push(g[top]); 
     }
+    max_map[vertex] = max;
 }
 
 int findSender(graph &g) {
     int tot_max = 0;
     int best = 0;
     for(int i = 1; i < g.size(); i++) {
-        int max = 0;
-        int ms = max_source[g[i]];
-        if(!visited[i]){
-            if(ms != -1) {
-                max = max_map[ms] + 1; 
-                visited[i] = true; 
-                max_source[i] = i;
-            }
-            else dfsIterative(i,g,max,i);
-            if(max > tot_max) {
-                tot_max = max; best = i; 
-                max_map.insert(make_pair(i,max));
-            } 
-        }
     }
     return best;
 }
