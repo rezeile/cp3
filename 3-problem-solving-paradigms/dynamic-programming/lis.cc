@@ -11,7 +11,7 @@
  * longest increasing subsequence problem.
  *
  * Author: Eliezer Abate
- * Last Updated October 3 2016
+ * Last Updated November 1 2016
  *
  */
  
@@ -22,6 +22,7 @@
 #include <set>
 #include <deque>
 #include <algorithm>
+#include <stack>
 using namespace std;
 typedef vector<int> si;
 
@@ -35,16 +36,32 @@ void printResult(int size, Container begin,Container end) {
     }
 }
 
+void reconstructLIS(vector<int> &P,vector<int> &V,int size) {
+    int sz = size - 1;
+    stack<int> sol;
+    for(int i = V.size() - 1; i >= 0; i--) {
+        if(P[i] == sz) {sol.push(V[i]);sz--;}
+    }
+
+    while(!sol.empty()) {
+        printf("%d\n",sol.top());
+        sol.pop();
+    }
+}
+
 void greedyLIS(vector<int> &V) {
     if(V.size() == 0) return;
     deque<int> L;
+    vector<int> P;
     for(int i = 0; i < V.size(); i++) {
        int pos = lower_bound(L.begin(),L.end(),V[i]) - L.begin(); 
+       P.push_back(pos);
        if(pos <= 0 && L.size() == 0) L.push_front(V[i]);
        else if(pos >= L.size()) L.push_back(V[i]);
        else if(L[pos] > V[i]) L[pos] = V[i];
     }
     printf("%lu\n-\n",L.size());
+    reconstructLIS(P,V,L.size());
 }
 
 void printLongestIncreasingSubsequence(vector<int> &v) {
@@ -69,10 +86,10 @@ void printLongestIncreasingSubsequence(vector<int> &v) {
 
 
 int main(int argc, char *argv[]) {
-    if(argc < 2) {
-        cerr << "enter an input file" << endl; return -1;
-    }
-    freopen(argv[1],"r",stdin);
+    //if(argc < 2) {
+      //  cerr << "enter an input file" << endl; return -1;
+    //}
+    //freopen(argv[1],"r",stdin);
     vector<int> v;
     int val;
     while(cin >> val) {
