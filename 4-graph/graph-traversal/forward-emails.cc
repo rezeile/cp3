@@ -1,3 +1,9 @@
+/* 
+ * Author: Eliezer Abate
+ * Date: 11/3/2016
+ *
+ */
+
 #include <cstdio>
 #include <iostream>
 #include <string>
