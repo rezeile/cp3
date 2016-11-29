@@ -6,7 +6,7 @@
 using namespace std;
 
 bool isPrime(int N) {
-    if(N <= 1) return false;
+    if(N <= 1 || N % 2 == 0) return false;
     if(N == 2) return true;
     int n = floor(sqrt(N)); 
     for(int i = 3; i <= n; i++) {
@@ -15,26 +15,23 @@ bool isPrime(int N) {
     return true;
 }
 
-void testPrime() {
-    int N = 21;
-    for(int i = 2; i < N; i++) {
+void goldbach(int N) {
+    for(int i = 3; i <= (N/2); i++) {
+        if(isPrime(i) && isPrime(N-i)) {
+            printf("%d = %d + %d\n",N,i,N-i);
+            break;
+        }
     }
 }
 
-
-void goldbach(int N) {
-    printf("%d = %d + %d\n",8,3,5);
-}
-
 int main(int argc, char *argv[]) {
-    /*if(argc < 2) { cerr << "enter an input file"; return -1; }
-    freopen(argv[1],"r",stdin);*/
+    if(argc < 2) { cerr << "enter an input file"; return -1; }
+    freopen(argv[1],"r",stdin);
     string input;
     int N;
-    testPrime();
-    /*while(cin >> N) {
+    while(cin >> N) {
         if(!N) break;
         goldbach(N);
-    }*/
+    }
     return 0;
 }
