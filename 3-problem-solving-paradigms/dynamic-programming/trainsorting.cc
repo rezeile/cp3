@@ -21,6 +21,18 @@
  * it.More thought will be given to this tomorrow. 
  */
 
+/* Day 3 (12/8/2016) Comments
+ * -----------------------------------
+ * The insight from yesterday allowed us to see that we can decompose the 
+ * problem into a modified LIS and LDS problem but the resulting problem
+ * would need to perform a LIS/LDS for each of the input values increasing
+ * the run time to O(n^2lgn), which is not fast enough for our problem. 
+ * An alternative approach was discovered with about 5 minutes left which 
+ * we will explore tomorrow and that involves an approach similar 
+ * to the Longest Common Subsequence problem where a solution was derived
+ * from working backwards.
+ */
+
 using namespace std;
 
 int main(int argc, char *argv[]) {
