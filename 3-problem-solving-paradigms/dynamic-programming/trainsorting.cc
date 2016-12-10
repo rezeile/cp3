@@ -3,6 +3,13 @@
 #include <string>
 #include <sstream>
 
+/* Day 5 (12/10/2016) Comments
+ * -----------------------------------
+ * Elaborated further on the construction of a recursive formula based
+ * on the insight from yesterday. This formula is by nature top-down
+ * and will be further massaged later today.
+ */
+
 /* Day 4 (12/9/2016) Comments
  * -----------------------------------
  * Used the insight from yesterday to try to derive a recursive structure
