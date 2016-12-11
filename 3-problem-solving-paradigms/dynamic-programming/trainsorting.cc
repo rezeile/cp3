@@ -5,6 +5,11 @@
 #include <vector>
 #include <algorithm>
 
+/* Day 6 (12/11/2016) Comments
+ * -----------------------------------
+ * Constructed basic recursive solution to this problem.
+ */
+
 /* Day 5 (12/10/2016) Comments
  * -----------------------------------
  * Elaborated further on the construction of a recursive formula based
