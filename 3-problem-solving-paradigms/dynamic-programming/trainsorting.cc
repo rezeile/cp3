@@ -2,6 +2,8 @@
 #include <iostream>
 #include <string>
 #include <sstream>
+#include <vector>
+#include <algorithm>
 
 /* Day 5 (12/10/2016) Comments
  * -----------------------------------
@@ -50,6 +52,25 @@
 
 using namespace std;
 
+int helper(vector<int> &L,vector<int> &trains,int i,int front,int back) {
+    if(i >= trains.size()) return 0;
+    if(i == (trains.size()-1)) {
+        return (trains[i] > front || trains[i] < back) ? 1 : 0;
+    }
+    int eligible = 0;
+    int old_front = front, old_back = back;
+    if(trains[i] > front) { front = trains[i]; eligible = 1; }
+    else if(trains[i] < back) { back = trains[i]; eligible = 1; }
+    return max(eligible + helper(L,trains,i+1,front,back),helper(L,trains,i+1,old_front,old_back)); 
+}
+
+void trainSort(vector<int> &trains) {
+    // L[i,n] holds the size of the longest train-sorted sequence
+    // after processing inputs trains[i,n]
+    vector<int> L(trains.size());                     
+    cout << helper(L,trains,0,-1,-1) << endl;
+}
+
 int main(int argc, char *argv[]) {
     if(argc < 2) { cerr << "enter an input file"; return -1; }
     freopen(argv[1],"r",stdin);
@@ -59,7 +80,11 @@ int main(int argc, char *argv[]) {
     for(int i = 0; i < T; i++) {
         int N;
         cin >> N;
-        // obtain weight values for the train
+        vector<int> trains(N);
+        for(int j = 0; j < N; j++) {
+            cin >> trains[j];
+        }
+        trainSort(trains); 
     }
     return 0;
 }
