@@ -5,9 +5,27 @@
 #include <vector>
 #include <algorithm>
 
+/* Day 7 (12/12/2016) Comments
+ * -----------------------------------
+ * Seem to have a reasonably "correct" but grossly 
+ * inefficient solution. Since I know that the type of algorithm
+ * I need needs to be probably O(n^2), I am using this insight 
+ * along with the nature of the recursive solution to see if I can
+ * generate a DP algorithm. 
+ *
+ * What seems reasonable to me at the moment is a nested for 
+ * loop structure of the following type:
+ *
+ *      for(int i = N; i >= 0; i--)
+ *          for(int j = 0; j < i; j++) 
+ *
+ * More exploration will follow tomorrow. 
+ *
+ */
 /* Day 6 (12/11/2016) Comments
  * -----------------------------------
  * Constructed basic recursive solution to this problem.
+ * Code starts at line 61.
  */
 
 /* Day 5 (12/10/2016) Comments
@@ -57,14 +75,22 @@
 
 using namespace std;
 
+void printTrains(vector<int> &trains) {
+    for(int i = 0; i < trains.size(); i++) {
+        printf("%d\n",trains[i]);
+    }
+}
+
 int helper(vector<int> &L,vector<int> &trains,int i,int front,int back) {
+    //printf("i = %d, trains[i] = %d, w_f = %d, w_b = %d\n",i,trains[i],front,back);
     if(i >= trains.size()) return 0;
     if(i == (trains.size()-1)) {
         return (trains[i] > front || trains[i] < back) ? 1 : 0;
     }
     int eligible = 0;
     int old_front = front, old_back = back;
-    if(trains[i] > front) { front = trains[i]; eligible = 1; }
+    if(front == -1 && back == -1) { front = back = trains[i]; eligible = 1;}
+    else if(trains[i] > front) { front = trains[i]; eligible = 1; }
     else if(trains[i] < back) { back = trains[i]; eligible = 1; }
     return max(eligible + helper(L,trains,i+1,front,back),helper(L,trains,i+1,old_front,old_back)); 
 }
