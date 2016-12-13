@@ -5,6 +5,15 @@
 #include <vector>
 #include <algorithm>
 
+/* Day 8 (12/13/2016) Comments
+ * -----------------------------------
+ * Keep a pair of vectors and double for loop
+ * keeping track of the longest that can be 
+ * placed at front and the longest that can be placed in 
+ * the back. 
+ */
+
+
 /* Day 7 (12/12/2016) Comments
  * -----------------------------------
  * Seem to have a reasonably "correct" but grossly 
@@ -22,6 +31,7 @@
  * More exploration will follow tomorrow. 
  *
  */
+
 /* Day 6 (12/11/2016) Comments
  * -----------------------------------
  * Constructed basic recursive solution to this problem.
