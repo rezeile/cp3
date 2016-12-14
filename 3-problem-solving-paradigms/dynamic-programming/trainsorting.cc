@@ -1,3 +1,7 @@
+/* 
+ * Author: Eliezer Abate
+ */
+
 #include <cstdio>
 #include <iostream>
 #include <string>
