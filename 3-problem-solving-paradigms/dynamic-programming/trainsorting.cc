@@ -120,7 +120,7 @@ void trainSort(vector<int> &trains) {
 
 void trainSortII(vector<int> &trains) {
     vector<pair<int,int>> L(trains.size());                     
-    int max = 1;
+    int max = trains.size() > 0 ? 1 : 0;
     for(int i = 0; i < trains.size(); i++) {
         L[i].first = L[i].second = 1;
         for(int j = 0; j < i; j++) {
