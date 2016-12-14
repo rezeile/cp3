@@ -10,6 +10,14 @@
 #include <algorithm>
 #include <utility>
 
+/* Day 9 (12/14/2016) Comments
+ * -----------------------------------
+ * The algorithm is not quite correct. There are now
+ * three simple test cases which result in an incorrect
+ * output: {1,2,3}, {3,1,5}, and {5,2,3,4,6}. We will look
+ * into these tomorrow.
+ */
+
 /* Day 8 (12/13/2016) Comments
  * -----------------------------------
  * Keep a pair of vectors and double for loop
@@ -125,11 +133,11 @@ void trainSortII(vector<int> &trains) {
         L[i].first = L[i].second = 1;
         for(int j = 0; j < i; j++) {
             if(trains[i] < trains[j]) {
-                L[i].second = L[j].second + 1;
+                L[i].second += L[j].second;
                 if(max < L[i].second) max = L[i].second;
             }
             if(trains[i] > trains[j]) {
-                L[i].first = L[j].first + 1;
+                L[i].first += L[j].first;
                 if(max < L[i].first) max = L[i].first;
             }
         }
@@ -138,8 +146,8 @@ void trainSortII(vector<int> &trains) {
 }
 
 int main(int argc, char *argv[]) {
-    //if(argc < 2) { cerr << "enter an input file"; return -1; }
-    //freopen(argv[1],"r",stdin);
+    if(argc < 2) { cerr << "enter an input file"; return -1; }
+    freopen(argv[1],"r",stdin);
     string input;
     int T;
     cin >> T;
