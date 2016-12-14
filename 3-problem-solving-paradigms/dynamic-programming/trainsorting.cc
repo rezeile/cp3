@@ -8,13 +8,15 @@
 #include <sstream>
 #include <vector>
 #include <algorithm>
+#include <utility>
 
 /* Day 8 (12/13/2016) Comments
  * -----------------------------------
  * Keep a pair of vectors and double for loop
  * keeping track of the longest that can be 
  * placed at front and the longest that can be placed in 
- * the back. 
+ * the back. Coded up a solution O(n^2). Will need to 
+ * rigorously test later on.
  */
 
 
@@ -116,9 +118,28 @@ void trainSort(vector<int> &trains) {
     cout << helper(L,trains,0,-1,-1) << endl;
 }
 
+void trainSortII(vector<int> &trains) {
+    vector<pair<int,int>> L(trains.size());                     
+    int max = 1;
+    for(int i = 0; i < trains.size(); i++) {
+        L[i].first = L[i].second = 1;
+        for(int j = 0; j < i; j++) {
+            if(trains[i] < trains[j]) {
+                L[i].second = L[j].second + 1;
+                if(max < L[i].second) max = L[i].second;
+            }
+            if(trains[i] > trains[j]) {
+                L[i].first = L[j].first + 1;
+                if(max < L[i].first) max = L[i].first;
+            }
+        }
+    }
+    printf("%d\n",max);
+}
+
 int main(int argc, char *argv[]) {
-    if(argc < 2) { cerr << "enter an input file"; return -1; }
-    freopen(argv[1],"r",stdin);
+    //if(argc < 2) { cerr << "enter an input file"; return -1; }
+    //freopen(argv[1],"r",stdin);
     string input;
     int T;
     cin >> T;
@@ -129,7 +150,7 @@ int main(int argc, char *argv[]) {
         for(int j = 0; j < N; j++) {
             cin >> trains[j];
         }
-        trainSort(trains); 
+        trainSortII(trains); 
     }
     return 0;
 }

@@ -4,7 +4,7 @@
 using namespace std;
 
 int main(int argc, char *argv[]) {
-    freopen("../input/train03","w+",stdout);
+    freopen("../input/train04","w+",stdout);
     /*int MAX = 10;
     int MAX_Q = 10;
     int D,M;
@@ -24,9 +24,9 @@ int main(int argc, char *argv[]) {
         }
     }*/
     int T = 1;
-    int N = 30;
+    int N = 3000;
     printf("%d\n%d\n",T,N);
-    for(int i = N; i >= 0; i--) {
+    for(int i = N; i >= 1; i--) {
         printf("%d\n",3 * i); 
     }
     return 0;
