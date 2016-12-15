@@ -10,6 +10,14 @@
 #include <algorithm>
 #include <utility>
 
+/* Day 10 (12/15/2016) Comments
+ * -----------------------------------
+ * I have devised a somewhat convoluted algorithm that may or 
+ * may not work out. But I'm really having a hard time with 
+ * constructing it, and thus I'll need to reexamine it again 
+ * tomorrow.
+ */
+
 /* Day 9 (12/14/2016) Comments
  * -----------------------------------
  * The algorithm is not quite correct. There are now
@@ -128,17 +136,18 @@ void trainSort(vector<int> &trains) {
 
 void trainSortII(vector<int> &trains) {
     vector<pair<int,int>> L(trains.size());                     
+    vector<int> F(trains.size()); // front most element when trains[i] is in the back
+    vector<int> B(trains.size()); // back most train when trains[i] is in the front
     int max = trains.size() > 0 ? 1 : 0;
     for(int i = 0; i < trains.size(); i++) {
         L[i].first = L[i].second = 1;
+        F[i] = B[i] = trains[i];
         for(int j = 0; j < i; j++) {
             if(trains[i] < trains[j]) {
-                L[i].second += L[j].second;
-                if(max < L[i].second) max = L[i].second;
+               L[i].second = trains[i] < B[j] ? L[i].second + L[j].first  : 2;
             }
             if(trains[i] > trains[j]) {
-                L[i].first += L[j].first;
-                if(max < L[i].first) max = L[i].first;
+                L[i].first = trains[i] > F[j] ? L[i].first  + L[j].second : 2;
             }
         }
     }
