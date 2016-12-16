@@ -10,6 +10,15 @@
 #include <algorithm>
 #include <utility>
 
+/* Day 11 (12/16/2016) Comments
+ * -----------------------------------
+ * Not much progress in the way of coding and finding a solution. Not
+ * much progress in even devising a correct algorithmic solution that
+ * should work in all instances. Will spend 20 extra minutes working 
+ * through examples and then if that doesn't work, I will have to abandon 
+ * the vector<pair<int,int>> approach and try something new.
+ */
+
 /* Day 10 (12/15/2016) Comments
  * -----------------------------------
  * I have devised a somewhat convoluted algorithm that may or 
