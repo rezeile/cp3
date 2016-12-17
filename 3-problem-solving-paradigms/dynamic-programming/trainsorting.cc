@@ -10,6 +10,13 @@
 #include <algorithm>
 #include <utility>
 
+/* Day 12 (12/17/2016) Comments
+ * -----------------------------------
+ * Trying to really pin down where my algorithm breaks.
+ *
+ */
+
+
 /* Day 11 (12/16/2016) Comments
  * -----------------------------------
  * Not much progress in the way of coding and finding a solution. Not
