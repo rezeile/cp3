@@ -10,6 +10,17 @@
 #include <algorithm>
 #include <utility>
 
+/* Day 13 (12/18/2016) Comments
+ * -----------------------------------
+ * I have refined the algorithm from about five days ago
+ * that involved the usage of the following data structure:
+ *
+ * vector<pair<pair<int,int>,pair<int,int>>> and I will look 
+ * into coding it on paper first tomorrow and then implementing
+ * the algorithm, and finally testing on special inputs.
+ *
+ */
+
 /* Day 12 (12/17/2016) Comments
  * -----------------------------------
  * Trying to really pin down where my algorithm breaks.
