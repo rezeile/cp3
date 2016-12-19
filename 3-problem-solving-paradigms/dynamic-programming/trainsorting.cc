@@ -155,13 +155,18 @@ int helper(vector<int> &L,vector<int> &trains,int i,int front,int back) {
 }
 
 void trainSort(vector<int> &trains) {
-    // L[i,n] holds the size of the longest train-sorted sequence
-    // after processing inputs trains[i,n]
     vector<int> L(trains.size());                     
     cout << helper(L,trains,0,-1,-1) << endl;
 }
 
 void trainSortII(vector<int> &trains) {
+    int max = 1;
+    vector<pair<pair<int,int>,pair<int,int>>> P(trains.size());
+    for(int i = 0; i < P.size(); i++) {
+        P[i].first.first = P[i].second.first = 1;
+        P[i].first.second = P[i].second.second = i;
+    }
+
     for(int i = 0; i < trains.size(); i++) {
     }
     printf("%d\n",max);
