@@ -10,6 +10,13 @@
 #include <algorithm>
 #include <utility>
 
+/* Day 14 (12/19/2016) Comments
+ * -----------------------------------
+ * Implemented the suggested solution from yesterdays comments
+ * and now its passing all the tests that were previously 
+ * failing and atleast those appear to be correct solutions.
+ */
+
 /* Day 13 (12/18/2016) Comments
  * -----------------------------------
  * I have refined the algorithm from about five days ago
