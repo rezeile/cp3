@@ -159,15 +159,49 @@ void trainSort(vector<int> &trains) {
     cout << helper(L,trains,0,-1,-1) << endl;
 }
 
-void trainSortII(vector<int> &trains) {
-    int max = 1;
-    vector<pair<pair<int,int>,pair<int,int>>> P(trains.size());
-    for(int i = 0; i < P.size(); i++) {
+void initializePairs(vector<pair<pair<int,int>,pair<int,int>>> &P) {
+   for(int i = 0; i < P.size(); i++) {
         P[i].first.first = P[i].second.first = 1;
         P[i].first.second = P[i].second.second = i;
     }
+}
 
+void trainSortII(vector<int> &trains) {
+    if(trains.size() == 0) {printf("%d\n",0);return;}
+    int max = 1;
+    vector<pair<pair<int,int>,pair<int,int>>> P(trains.size());
+    initializePairs(P);     
     for(int i = 0; i < trains.size(); i++) {
+        for(int j = 0; j < i; j++) {
+            // case I: trains[i] > trains[j]
+            if(trains[i] > trains[j]) {
+                int front_new_length = P[j].first.first + 1;
+                if(front_new_length > max) max = front_new_length;
+                int back = P[j].first.second;
+
+                if(P[i].first.first < front_new_length) {
+                    P[i].first.first = front_new_length;
+                    P[i].first.second = back;
+                }
+                if(front_new_length > P[back].second.first) {
+                    P[back].second.first = front_new_length;
+                    P[back].second.second = i;
+                }
+            } else { // case II: trains[i] < trains[j]
+                int back_new_length = P[j].second.first + 1;
+                if(back_new_length > max) max = back_new_length;
+                int front = P[j].second.second;
+
+                if(P[i].second.first < back_new_length) {
+                    P[i].second.first = back_new_length;
+                    P[i].second.second = front;
+                }
+                if(back_new_length > P[front].first.first) {
+                    P[front].first.first = back_new_length;
+                    P[front].first.second = i;
+                }
+            }
+        }
     }
     printf("%d\n",max);
 }
