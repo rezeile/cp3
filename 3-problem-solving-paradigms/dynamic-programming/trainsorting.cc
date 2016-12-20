@@ -10,6 +10,13 @@
 #include <algorithm>
 #include <utility>
 
+/* Day 15 (12/20/2016) Comments
+ * -----------------------------------
+ * The folllowing input {2 7 0 4 1 5 8 3 6}
+ * should generate an output of 5 but I can't 
+ * even visualize it yet. (Udebug resource used.)
+ */
+
 /* Day 14 (12/19/2016) Comments
  * -----------------------------------
  * Implemented the suggested solution from yesterdays comments
