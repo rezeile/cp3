@@ -6,6 +6,12 @@
 #include <string>
 using namespace std;
 
+/*
+ * Day 1 Comments: 12/21/2016
+ * --------------------------
+ * Understood the Problem.
+ */
+
 void printPartialCredit(vector<int> &answer,vector<int> &response) {
     for(int i = 0; i < response.size(); i++) {
         if(i == response.size() - 1) {
