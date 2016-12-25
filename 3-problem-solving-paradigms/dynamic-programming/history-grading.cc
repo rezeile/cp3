@@ -7,6 +7,12 @@
 using namespace std;
 
 /*
+ * Day 4 Comments: 12/24/2016
+ * --------------------------
+ * Haven't been able to find a solution.
+ */
+
+/*
  * Day 3 Comments: 12/23/2016
  * --------------------------
  * Will be deliberating from Big Bear.
