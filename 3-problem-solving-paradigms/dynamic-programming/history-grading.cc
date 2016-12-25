@@ -11,6 +11,12 @@ using namespace std;
  * --------------------------
  * It's important that I find out how to tackle 
  * a problem better.
+ *
+ * I need to find out whether the following input will
+ * generate an output of 9. 
+ *
+ * 3 1  2 4 9 5 10 6 8 7
+ * 2 10 1 3 8 4 9  5 7 6
  */
 
 /*
