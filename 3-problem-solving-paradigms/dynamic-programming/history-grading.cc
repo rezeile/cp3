@@ -9,8 +9,8 @@ using namespace std;
 /*
  * Day 5 Comments: 12/25/2017
  * --------------------------
- *
- *
+ * It's important that I find out how to tackle 
+ * a problem better.
  */
 
 /*
