@@ -20,6 +20,7 @@ using namespace std;
  * believe this insight will help me discover a solution that will help 
  * me tackle the trainsorting problem.
  *
+ * This is a longest common subsequence problem.
  */
 
 /*
@@ -69,17 +70,28 @@ void printVector(vector<int> &vec) {
     }
 }
 
+int LIS(vector<int> &m1,vector<int> &m2) {
+    return 5;
+}
 void printPartialCredit(vector<int> &answer,vector<int> &response) {
     // mapping between answer ordering and digits 1 - N
     vector<int> ordering(answer.size() + 1);
+    vector<int> map1(answer.size() + 1);
     for(int i = 0; i < answer.size(); i++) 
         ordering[answer[i]] = i + 1;
+    for(int i = 1; i < map1.size(); i++)
+        map1[i] = ordering[i];
     
     // student ranking mapping
     vector<int> sranking(response.size() + 1);
+    vector<int> map2(response.size() + 1);
     for(int i = 0; i < response.size(); i++)
         sranking[response[i]] = i + 1;
-
+    for(int i = 1; i < map2.size(); i++)
+        map2[i] = sranking[i];
+    
+    // print LIS
+    printf("%d\n",LIS(map1,map2));
 }
 
 int main(int argc, char *argv[]) {
