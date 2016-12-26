@@ -7,6 +7,22 @@
 using namespace std;
 
 /*
+ * Day 6 Comments: 12/26/2017
+ * --------------------------
+ * I had to look into the solution insight at the following
+ * url: https://saicheems.wordpress.com/2013/11/08/uva-111-history-grading/
+ * 
+ * It seems to me that the order given my both the student responses, 
+ * and the respective orderings for each test case represent the 
+ * orderings of events [1...N]. Admittedly, it really does not feel
+ * good to have had to search for a solution, but I felt that I wasn't 
+ * really gaining any new insights in my search for a solution. I still
+ * believe this insight will help me discover a solution that will help 
+ * me tackle the trainsorting problem.
+ *
+ */
+
+/*
  * Day 5 Comments: 12/25/2017
  * --------------------------
  * It's important that I find out how to tackle 
