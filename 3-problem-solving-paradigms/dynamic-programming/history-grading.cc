@@ -70,25 +70,16 @@ void printVector(vector<int> &vec) {
 }
 
 void printPartialCredit(vector<int> &answer,vector<int> &response) {
+    // mapping between answer ordering and digits 1 - N
     vector<int> ordering(answer.size() + 1);
-    vector<int> pc(response.size(),1);
-    int index = 0;
-    for(int i = 0; i < answer.size(); i++) {
-        ordering[answer[i]] = index++; 
-    }
-    int max = 1;
-    for(int i = 0; i < response.size(); i++) {
-        for(int j = 0; j < i; j++) {
-            if(ordering[response[i]] > ordering[response[j]]) {
-                if(pc[i] < pc[j] + 1) {
-                    pc[i] = pc[j] + 1;
-                    if(pc[i] > max) max = pc[i];
-                }
-            }
-        }
-    }
-    //printVector(pc);
-    printf("%d\n",max);
+    for(int i = 0; i < answer.size(); i++) 
+        ordering[answer[i]] = i + 1;
+    
+    // student ranking mapping
+    vector<int> sranking(response.size() + 1);
+    for(int i = 0; i < response.size(); i++)
+        sranking[response[i]] = i + 1;
+
 }
 
 int main(int argc, char *argv[]) {
