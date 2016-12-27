@@ -4,7 +4,14 @@
 #include <sstream>
 #include <vector>
 #include <string>
+#include <algorithm>
 using namespace std;
+
+/*
+ * Day 7 Comments: 12/27/2017
+ * --------------------------
+ * Longest Common Subsequence solution.
+ */
 
 /*
  * Day 6 Comments: 12/26/2017
@@ -70,9 +77,29 @@ void printVector(vector<int> &vec) {
     }
 }
 
-int LIS(vector<int> &m1,vector<int> &m2) {
-    return 5;
+void printMatrix(vector<vector<int>> &mtx) {
+    for(int i = 0; i < mtx.size(); i++) {
+        printVector(mtx[i]); 
+    }
 }
+
+int LIS(vector<int> &m1,vector<int> &m2) {
+    vector<vector<int>> mtx(m1.size(),vector<int>(m2.size()));
+    for(int i = 0; i < m1.size(); i++) {
+        for(int j = 0; j < m2.size(); j++) {
+            if(i < 0 || j < 0) mtx[i][j] = 0;
+            else if(m1[i] == m2[j]) 
+                mtx[i][j] = i == 0 || j == 0 ? 1 :mtx[i-1][j-1] + 1;
+            else {
+                int max1 = i == 0 ? 0 : mtx[i-1][j];
+                int max2 = j == 0 ? 0 : mtx[i][j-1];
+                mtx[i][j] =  max(max1,max2); 
+            }
+        }
+    }
+    return mtx[m1.size()-1][m2.size()-1];
+}
+
 void printPartialCredit(vector<int> &answer,vector<int> &response) {
     // mapping between answer ordering and digits 1 - N
     vector<int> ordering(answer.size() + 1);
@@ -90,13 +117,15 @@ void printPartialCredit(vector<int> &answer,vector<int> &response) {
     for(int i = 1; i < map2.size(); i++)
         map2[i] = sranking[i];
     
-    // print LIS
+    // erase first element from both map1 and map2
+    map1.erase(map1.begin());
+    map2.erase(map2.begin());
     printf("%d\n",LIS(map1,map2));
 }
 
 int main(int argc, char *argv[]) {
-    if(argc < 2) { cerr << "enter an input file"; return -1; }
-    freopen(argv[1],"r",stdin);
+    //if(argc < 2) { cerr << "enter an input file"; return -1; }
+    //freopen(argv[1],"r",stdin);
     string input;
     int N;
     getline(cin,input);
