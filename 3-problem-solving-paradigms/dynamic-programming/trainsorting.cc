@@ -10,6 +10,14 @@
 #include <algorithm>
 #include <utility>
 
+/* Day 16 (12/27/2016) Comments
+ * -----------------------------------
+ * I found a solution to this problem not of my own, 
+ * but by using the hints given in the CP3 text book.
+ * I have determined that to be able to come up with 
+ * more insights :
+ */
+
 /* Day 15 (12/20/2016) Comments
  * -----------------------------------
  * The folllowing input {2 7 0 4 1 5 8 3 6}
