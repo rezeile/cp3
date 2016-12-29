@@ -1,5 +1,8 @@
 /* 
+ * Trainsorting
+ * ---------------------
  * Author: Eliezer Abate
+ *
  */
 
 #include <cstdio>
@@ -9,6 +12,8 @@
 #include <vector>
 #include <algorithm>
 #include <utility>
+#include <deque>
+#include <functional>
 
 /* Day 16 (12/27/2016) Comments
  * -----------------------------------
@@ -156,10 +161,57 @@
 
 using namespace std;
 
+void printVector(vector<int> &vec,int start) {
+    for(int i = start; i < vec.size(); i++) {
+        if(i == vec.size() - 1) {
+            printf("%d\n",vec[i]);
+        } else printf("%d ",vec[i]);
+    }
+}
+
 void printTrains(vector<int> &trains) {
     for(int i = 0; i < trains.size(); i++) {
         printf("%d\n",trains[i]);
     }
+}
+
+int LIS(vector<int> &vec,int start) {
+    if(vec.empty()) return 0;
+    deque<int> L;
+    for(int i = start; i < vec.size(); i++) {
+        int pos = lower_bound(L.begin(),L.end(),vec[i]) - L.begin();
+        if(pos <= 0 && L.size() == 0) L.push_front(vec[i]);
+        else if(pos >= L.size()) L.push_back(vec[i]);
+        else if(L[pos] > vec[i] && vec[i] > L[start]) L[pos] = vec[i];
+    }
+    return (int) L.size();
+}
+
+int LDS(vector<int> &vec,int start) {
+    if(vec.empty()) return 0;
+    deque<int> L;
+    for(int i = start; i < vec.size(); i++) {
+        int pos = upper_bound(L.begin(),L.end(),vec[i],greater<int>()) - L.begin();
+        if(pos <= 0 && L.size() == 0) L.push_front(vec[i]);
+        else if(pos >= L.size()) L.push_back(vec[i]);
+        else if(L[pos] < vec[i] && vec[i] < L[start]) L[pos] = vec[i];
+    }
+    return (int) L.size();
+}
+
+void trainSortIII(vector<int> &trains) {
+    int max = 0;
+    int si = 0;
+    int slis = 0;
+    int slds = 0;
+    for(int i = 0; i < trains.size(); i++) {
+        int lis = LIS(trains,i);
+        int lds = LDS(trains,i);
+        int res = lis + lds - 1;
+        if(res > max) {
+            max = res; si = i; slis = lis; slds = lds;}
+    }
+    printf("%d\n",max);
 }
 
 int helper(vector<int> &L,vector<int> &trains,int i,int front,int back) {
@@ -241,7 +293,7 @@ int main(int argc, char *argv[]) {
         for(int j = 0; j < N; j++) {
             cin >> trains[j];
         }
-        trainSortII(trains); 
+        trainSortIII(trains); 
     }
     return 0;
 }

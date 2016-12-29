@@ -24,7 +24,7 @@ int main(int argc, char *argv[]) {
         }
     }*/
     int T = 1;
-    int N = 3000;
+    int N = 2000;
     printf("%d\n%d\n",T,N);
     for(int i = N; i >= 1; i--) {
         printf("%d\n",3 * i); 
