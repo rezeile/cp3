@@ -1,7 +1,7 @@
 /* UVa 10684: The jackpot
  * 
  * Author: Eliezer Abate
- * Last Updated: October 3, 2016
+ * Last Updated: Jan 1 2017
  */
 
 #include <vector>
