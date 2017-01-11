@@ -4,13 +4,31 @@
 #include <sstream>
 #include <vector>
 #include <set>
+#include <utility> // for pair
 using namespace std;
+
+// custom comparator 
+bool cmp(tuple<int,int,int> &t1,tuple<int,int,int> &t2) {
+    return get<0>(t1) < get<0>(t2) && get<1>(t2) < get<1>(t2);
+}
 
 int babylon(set<tuple<int,int,int>> &s) {
     vector<tuple<int,int,int>> v(s.begin(),s.end());
-    int max_height = 0;
-    
-    return 8;
+    vector<pair<int,int>> L(v.size()); 
+    int maxHeight = 0;
+    for(int i  = 0; i < v.size(); i++) {
+        L[i].second = get<2>(v[i]); // get height 
+        for(int j = 0; j < i; j++) {
+            tuple<int,int,int> ti = v[i];
+            tuple<int,int,int> tj = v[j];
+            if(cmp(ti,tj)) {
+                L[i].first += 1;
+                L[i].second += L[j].second;
+                if(L[i].second > maxHeight) maxHeight = L[i].second;
+            }
+        }
+    }
+    return maxHeight;
 }
 
 void addToSet(int x,int y,int z,set<tuple<int,int,int>> &s) {
