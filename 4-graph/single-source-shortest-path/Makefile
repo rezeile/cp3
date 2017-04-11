@@ -1,7 +1,7 @@
 CC= g++
 RM= rm -vf
 CPPFLAGS= -std=c++11 -Wall -g
-SRCFILES=  gopher.cc node-too-far.cc
+SRCFILES=  knights.cc mall-mania.cc gopher.cc node-too-far.cc
 OBJFILES= $(patsubst %.cc, %.o, $(SRCFILES))
 PROGFILES= $(patsubst %.cc, %, $(SRCFILES))
 SYMFILES=$(patsubst %.cc, %.dSYM, $(SRCFILES))
