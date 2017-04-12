@@ -1,4 +1,4 @@
-I. Level 1 (20)
+I. Level 1 (19)
    A. Introduction
       1. 579 - Clock Hands
       2. 10189 - Minesweeper
@@ -13,13 +13,11 @@ I. Level 1 (20)
       2. 10004 - Bicoloring 
    E. Mathematics
       1. 382 - Perfection
-      2. 10346 - Peter's Smokes
+      2. 10346 - Peters Smokes
       3. 264 - Count on Cantor
       4. 575 - Skew Binary
       5. 374 - Big Mod
       6. 10110 - Light, more light
-   F. String Processing
-      1. 488 - Triangle Wave
    G. Rare Topics
       1. 673 - Parentheses Balance
       2. 1327 - Flip Sort
@@ -196,7 +194,7 @@ V. Level 5
    A. Introduction
       1. Consanguine Calculations
    B. Problem Solving Paradigms 
-      1. Let's Yum Cha!
+      1. Lets Yum Cha!
    C. Graph
       1. [Special Graphs] - Cockroach Escape Network
       2. Flight Planning
@@ -212,7 +210,7 @@ V. Level 5
       4. Number of Paths
       5. Smeech 
    F. Geometry 
-      1. The Sultan's Problem
+      1. The Sultans Problem
    G. Advanced (16)
    H. Rare (12)
 
