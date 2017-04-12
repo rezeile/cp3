@@ -1,10 +1,9 @@
-I. Level 1 (18)
+I. Level 1 (16)
    A. Introduction
       1. 579 - Clock Hands
       2. 10189 - Minesweeper
    B. Data Structures and Libraries
       1. 146 - ID Codes
-      2. 10107 - What is the Median?
    C. Problem Solving Paradigms
       1. 357 - Let Me Count The Ways
    D. Graph
