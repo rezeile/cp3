@@ -1,8 +1,7 @@
 CC= g++
 RM= rm -vf
 CPPFLAGS= -std=c++11 -Wall -g
-SRCFILES= forward-emails.cc vertex.cc \
-          mutant.cc knights.cc 
+SRCFILES= ordertasks.cc
 OBJFILES= $(patsubst %.cc, %.o, $(SRCFILES))
 PROGFILES= $(patsubst %.cc, %, $(SRCFILES))
 SYMFILES=$(patsubst %.cc, %.dSYM, $(SRCFILES))

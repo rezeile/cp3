@@ -1,15 +1,13 @@
-I. Level 1 (19)
+I. Level 1 (18)
    A. Introduction
       1. 579 - Clock Hands
       2. 10189 - Minesweeper
-      3. 401 - Palindromes
    B. Data Structures and Libraries
       1. 146 - ID Codes
       2. 10107 - What is the Median?
    C. Problem Solving Paradigms
       1. 357 - Let Me Count The Ways
    D. Graph
-      1. 10305 - Ordering Tasks
       2. 10004 - Bicoloring 
    E. Mathematics
       1. 382 - Perfection
@@ -98,7 +96,7 @@ II. Level 2 (73)
        2. Common Permutation
        3. Immediate Decodability
        4. [String Matching] Power Strings
-       5. Where's Waldorf?
+       5. Wheres Waldorf?
        6. [String Processing with DP] - Vacation
     G. Geometry
        1. [Basic Geometry] - Colourful Flowers
