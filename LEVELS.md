@@ -1,4 +1,4 @@
-I. Level 1 (16)
+I. Level 1 (15)
    A. Introduction
       1. 579 - Clock Hands
       2. 10189 - Minesweeper
@@ -7,7 +7,7 @@ I. Level 1 (16)
    C. Problem Solving Paradigms
       1. 357 - Let Me Count The Ways
    D. Graph
-      2. 10004 - Bicoloring 
+      1. 10004 - Bicoloring 
    E. Mathematics
       1. 382 - Perfection
       2. 10346 - Peters Smokes
@@ -20,7 +20,6 @@ I. Level 1 (16)
       2. 1327 - Flip Sort
       3. 439 - Knight Moves
       4. 120 - Stacks of Flapjacks
-      5. 11462 - Age Sort
 
 II. Level 2 (73) 
     A. Introduction
