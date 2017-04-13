@@ -1,4 +1,4 @@
-I. Level 1 (14)
+I. Level 1 (13)
    A. Introduction
       1. 579 - Clock Hands
       2. 10189 - Minesweeper
@@ -10,11 +10,10 @@ I. Level 1 (14)
       1. 10004 - Bicoloring 
    E. Mathematics
       1. 382 - Perfection
-      2. 10346 - Peters Smokes
       3. 264 - Count on Cantor
       4. 575 - Skew Binary
       5. 374 - Big Mod
-      6. 10110 - Light, more light
+      5. 10110 - Light, more light
    G. Rare Topics
       1. 673 - Parentheses Balance
       2. 439 - Knight Moves
