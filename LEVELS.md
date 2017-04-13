@@ -1,4 +1,4 @@
-I. Level 1 (15)
+I. Level 1 (14)
    A. Introduction
       1. 579 - Clock Hands
       2. 10189 - Minesweeper
@@ -17,9 +17,8 @@ I. Level 1 (15)
       6. 10110 - Light, more light
    G. Rare Topics
       1. 673 - Parentheses Balance
-      2. 1327 - Flip Sort
-      3. 439 - Knight Moves
-      4. 120 - Stacks of Flapjacks
+      2. 439 - Knight Moves
+      3. 120 - Stacks of Flapjacks
 
 II. Level 2 (73) 
     A. Introduction
