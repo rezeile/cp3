@@ -6,8 +6,6 @@ I. Level 1 (13)
       1. 146 - ID Codes
    C. Problem Solving Paradigms
       1. 357 - Let Me Count The Ways
-   D. Graph
-      1. 10004 - Bicoloring 
    E. Mathematics
       1. 382 - Perfection
       3. 264 - Count on Cantor
