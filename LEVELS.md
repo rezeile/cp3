@@ -1,4 +1,4 @@
-I. Level 1 (13)
+I. Level 1 (12)
    A. Introduction
       1. 579 - Clock Hands
       2. 10189 - Minesweeper
