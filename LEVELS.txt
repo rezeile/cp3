@@ -1,7 +1,6 @@
-I. Level 1 (9)
+I. Level 1 (8)
    A. Introduction
       1. 579 - Clock Hands
-      2. 10189 - Minesweeper
    E. Mathematics
       1. 382 - Perfection
       2. 264 - Count on Cantor
