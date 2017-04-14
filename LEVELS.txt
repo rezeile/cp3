@@ -1,6 +1,4 @@
-I. Level 1 (8)
-   A. Introduction
-      1. 579 - Clock Hands
+I. Level 1 (7)
    E. Mathematics
       1. 382 - Perfection
       2. 264 - Count on Cantor
@@ -8,7 +6,7 @@ I. Level 1 (8)
       4. 374 - Big Mod
       5. 10110 - Light, more light
    G. Rare Topics
-      2. 439 - Knight Moves
+      1. 439 - Knight Moves
       2. 120 - Stacks of Flapjacks
 
 II. Level 2 (73) 
