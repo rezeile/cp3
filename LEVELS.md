@@ -1,9 +1,7 @@
-I. Level 1 (12)
+I. Level 1 (11)
    A. Introduction
       1. 579 - Clock Hands
       2. 10189 - Minesweeper
-   B. Data Structures and Libraries
-      1. 146 - ID Codes
    C. Problem Solving Paradigms
       1. 357 - Let Me Count The Ways
    E. Mathematics
