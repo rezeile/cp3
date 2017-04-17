@@ -1,7 +1,6 @@
-I. Level 1 (2)
+I. Level 1 (1)
    E. Mathematics
-      1. 264 - Count on Cantor
-      2. 10110 - Light, more light
+      1. 10110 - Light, more light
 
 II. Level 2 (73) 
     A. Introduction
