@@ -2,6 +2,19 @@
 #include <cmath>
 using namespace std;
 
+void cantorConstant(int N) {
+    int num = ceil((-1 + sqrt(1 + 8*N))/2);
+    int exp = (num * (num + 1)) / 2;
+    int delta = exp - N;
+    int a,b;
+    if (num % 2 == 0) { 
+        a = num - delta; b = 1 + delta;
+    } else { 
+            a = 1 + delta; b = num - delta; 
+    }
+    printf("TERM %d IS %d/%d\n",N,a,b);
+}
+
 void cantor(int N) {
     int num = ceil((-1 + sqrt(1 + 8*N))/2);
     int a = 1, b = 1;
@@ -31,7 +44,7 @@ int main(int argc, char *argv[]) {
     //freopen(argv[1],"r",stdin);
     int N;
     while(scanf("%d",&N) != EOF) {
-        cantor(N);
+        cantorConstant(N);
     }
     return 0;
 }
