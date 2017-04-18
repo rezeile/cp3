@@ -1,4 +1,4 @@
-II. Level 2 (71) 
+II. Level 2 (70) 
     A. Introduction
        1. Game (Chess) - Chess
        2. Game (Others), Easier - Hangman Judge
@@ -14,16 +14,15 @@ II. Level 2 (71)
        8. Union-Find Disjoint Sets - Network Connections
        9. Union-Find ... - Virtual Friends
     C. Problem Solving Paradigms
-       1. Iterative (One Loop, Linear Scan) - Fractions Again
        2. Iterative (Two Nested Loops) - Closest Sums
        3. Recursive Backtracking (Medium) - Prime Ring Problem
        4. Binary Search - Exact Sum
        5. Binary Search the Answer - Solve It
        8. Greedy: Classical, Usually Easier - The Bus Driver Problem
        8. Greedy: Involving Sorting - Dragon of Loowater
-       8. Greedy: Non Classical, Usually Harder - Maximum Sum (II)
+       7. Greedy: Non Classical, Usually Harder - Maximum Sum (II)
     D. Graph
-       1. Finding Articulation Points - Network
+       1. Graph Traversal - Network
        2. All-Pairs Shortest Paths - Page Hopping
        3. APSP - Arbitrage
        4. Minimum Spanning Tree - Dark roads
@@ -32,7 +31,7 @@ II. Level 2 (71)
        7. SSSP - Sending Email
        8. SSSP - Wormholes
        9. Network Flow - Internet Bandwidth
-       10. DAG - Longest Run on Snowb ...
+       10. Special Graph (DAG) - Longest Run on Snowb ...
     E. Mathematics
        1. [Adhoc] - Back to Intermediate Ma...
        2. Numbering Roads
@@ -90,7 +89,7 @@ III. Level 3 (178)
     H. Advanced (5)
     I. Rare (7)
 
-IV. Level 4
+IV. Level 4 (119)
     A. Introduction 
        1. [Ad Hoc] All Integer Average
        2. Mobile Casanova
@@ -161,7 +160,7 @@ IV. Level 4
     H. More Advanced Topics (15)
     I. Rare (23)
 
-V. Level 5
+V. Level 5 (42)
    A. Introduction
       1. Consanguine Calculations
    B. Problem Solving Paradigms 
