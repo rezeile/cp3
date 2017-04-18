@@ -1,7 +1,7 @@
 CC= g++
 RM= rm -vf
 CPPFLAGS= -std=c++11 -Wall -g
-SRCFILES= test.cc spiral-tap.cc 
+SRCFILES= rotated-square.cc spiral-tap.cc 
 OBJFILES= $(patsubst %.cc, %.o, $(SRCFILES))
 PROGFILES= $(patsubst %.cc, %, $(SRCFILES))
 SYMFILES=$(patsubst %.cc, %.dSYM, $(SRCFILES))
