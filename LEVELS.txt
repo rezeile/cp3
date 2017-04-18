@@ -1,4 +1,4 @@
-II. Level 2 (72) 
+II. Level 2 (71) 
     A. Introduction
        1. Game (Chess) - Chess
        2. Game (Others), Easier - Hangman Judge
@@ -19,10 +19,9 @@ II. Level 2 (72)
        3. Recursive Backtracking (Medium) - Prime Ring Problem
        4. Binary Search - Exact Sum
        5. Binary Search the Answer - Solve It
-       7. DP: Non Classical (The Easier Ones) - How do you add?
        8. Greedy: Classical, Usually Easier - The Bus Driver Problem
-       9. Greedy: Involving Sorting - Dragon of Loowater
-       9. Greedy: Non Classical, Usually Harder - Maximum Sum (II)
+       8. Greedy: Involving Sorting - Dragon of Loowater
+       8. Greedy: Non Classical, Usually Harder - Maximum Sum (II)
     D. Graph
        1. Finding Articulation Points - Network
        2. All-Pairs Shortest Paths - Page Hopping
