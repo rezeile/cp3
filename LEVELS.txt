@@ -19,7 +19,6 @@ II. Level 2 (73)
        3. Recursive Backtracking (Medium) - Prime Ring Problem
        4. Binary Search - Exact Sum
        5. Binary Search the Answer - Solve It
-       6. DP: Traveling Salesman Problem - Getting in Line
        7. DP: Non Classical (The Easier Ones) - How do you add?
        8. Greedy: Classical, Usually Easier - The Bus Driver Problem
        9. Greedy: Involving Sorting - Dragon of Loowater
