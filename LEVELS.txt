@@ -1,4 +1,4 @@
-II. Level 2 (73) 
+II. Level 2 (72) 
     A. Introduction
        1. Game (Chess) - Chess
        2. Game (Others), Easier - Hangman Judge
@@ -22,7 +22,7 @@ II. Level 2 (73)
        7. DP: Non Classical (The Easier Ones) - How do you add?
        8. Greedy: Classical, Usually Easier - The Bus Driver Problem
        9. Greedy: Involving Sorting - Dragon of Loowater
-       10. Greedy: Non Classical, Usually Harder - Maximum Sum (II)
+       9. Greedy: Non Classical, Usually Harder - Maximum Sum (II)
     D. Graph
        1. Finding Articulation Points - Network
        2. All-Pairs Shortest Paths - Page Hopping
