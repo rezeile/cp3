@@ -1,4 +1,4 @@
-II. Level 2 (69) 
+II. Level 2 (68) 
     A. Introduction
        1. Game (Chess) - Chess
        2. Game (Others), Easier - Hangman Judge
@@ -14,12 +14,11 @@ II. Level 2 (69)
        8. Union-Find Disjoint Sets - Network Connections
        9. Union-Find ... - Virtual Friends
     C. Problem Solving Paradigms
-       3. Recursive Backtracking (Medium) - Prime Ring Problem
        4. Binary Search - Exact Sum
        5. Binary Search the Answer - Solve It
-       6. Greedy: Classical, Usually Easier - The Bus Driver Problem
-       6. Greedy: Involving Sorting - Dragon of Loowater
-       6. Greedy: Non Classical, Usually Harder - Maximum Sum (II)
+       5. Greedy: Classical, Usually Easier - The Bus Driver Problem
+       5. Greedy: Involving Sorting - Dragon of Loowater
+       5. Greedy: Non Classical, Usually Harder - Maximum Sum (II)
     D. Graph
        1. Graph Traversal - Network
        2. All-Pairs Shortest Paths - Page Hopping
