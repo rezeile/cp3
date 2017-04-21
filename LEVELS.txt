@@ -1,10 +1,9 @@
-II. Level 2 (67) 
+II. Level 2 (66) 
     A. Introduction
        1. Game (Chess) - Chess
        2. Game (Others), Easier - Hangman Judge
        3. Palindrome - Mother bear
     B. Data Structures and Libraries
-       1. 1D Array Manipulation - Newspaper
        2. C++ STL algorithm - Contest Scoreboard
        3. C++ STL list - Broken Keyboard
        4. C++ STL stack - Rails
