@@ -1,4 +1,4 @@
-II. Level 2 (66) 
+II. Level 2 (65) 
     A. Introduction
        1. Game (Chess) - Chess
        2. Game (Others), Easier - Hangman Judge
@@ -7,11 +7,10 @@ II. Level 2 (66)
        2. C++ STL algorithm - Contest Scoreboard
        3. C++ STL list - Broken Keyboard
        4. C++ STL stack - Rails
-       5. C++ STL map - Hardwood Species
        6. C++ STL set - CD
        7. Graph Data Structures - Easy Problem from Rujia...
-       8. Union-Find Disjoint Sets - Network Connections
-       9. Union-Find ... - Virtual Friends
+       7. Union-Find Disjoint Sets - Network Connections
+       7. Union-Find ... - Virtual Friends
     C. Problem Solving Paradigms
        1. Binary Search the Answer - Solve It
        2. Greedy: Classical, Usually Easier - The Bus Driver Problem
