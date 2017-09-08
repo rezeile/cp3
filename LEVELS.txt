@@ -1,14 +1,13 @@
-II. Level 2 (64) 
+II. Level 2 (62) 
     A. Introduction
        1. Game (Chess) - Chess
        2. Game (Others), Easier - Hangman Judge
        3. Palindrome - Mother bear
     B. Data Structures and Libraries
-       1. C++ STL list - Broken Keyboard
-       2. C++ STL stack - Rails
-       3. Graph Data Structures - Easy Problem from Rujia...
-       4. Union-Find Disjoint Sets - Network Connections
-       5. Union-Find ... - Virtual Friends
+       1. C++ STL stack - Rails
+       2. Graph Data Structures - Easy Problem from Rujia...
+       3. Union-Find Disjoint Sets - Network Connections
+       4. Union-Find ... - Virtual Friends
     C. Problem Solving Paradigms
        1. Binary Search the Answer - Solve It
        2. Greedy: Classical, Usually Easier - The Bus Driver Problem
