@@ -1,15 +1,13 @@
-II. Level 2 (61) 
+II. Level 2 (59) 
     A. Introduction
        1. Game (Chess) - Chess
        2. Game (Others), Easier - Hangman Judge
-       3. Palindrome - Mother bear
     B. Data Structures and Libraries
        1. Graph Data Structures - Easy Problem from Rujia...
        2. Union-Find Disjoint Sets - Network Connections
        3. Union-Find ... - Virtual Friends
     C. Problem Solving Paradigms
        1. Binary Search the Answer - Solve It
-       2. Greedy: Classical, Usually Easier - The Bus Driver Problem
        3. Greedy: Involving Sorting - Dragon of Loowater
        4. Greedy: Non Classical, Usually Harder - Maximum Sum (II)
     D. Graph
@@ -73,6 +71,10 @@ III. Level 3 (178)
     A. Intro (19)
     B. DS (21)
     C. PS (31)
+       1. Iterative/Backtracking (11) 
+       2. Divide and Conquer (3)
+       3. DP (12)
+       4. Greedy (5)
     D. Graph (27)
     E. Math (41)
     F. SP (16)
