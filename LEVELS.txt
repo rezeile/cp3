@@ -1,4 +1,4 @@
-II. Level 2 (59) 
+II. Level 2 (58) 
     A. Introduction
        1. Game (Chess) - Chess
        2. Game (Others), Easier - Hangman Judge
@@ -8,7 +8,6 @@ II. Level 2 (59)
        3. Union-Find ... - Virtual Friends
     C. Problem Solving Paradigms
        1. Binary Search the Answer - Solve It
-       3. Greedy: Involving Sorting - Dragon of Loowater
        4. Greedy: Non Classical, Usually Harder - Maximum Sum (II)
     D. Graph
        1. Graph Traversal - Network
