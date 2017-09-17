@@ -1,4 +1,4 @@
-II. Level 2 (58) 
+II. Level 2 (57) 
     A. Introduction
        1. Game (Chess) - Chess
        2. Game (Others), Easier - Hangman Judge
@@ -8,7 +8,6 @@ II. Level 2 (58)
        3. Union-Find ... - Virtual Friends
     C. Problem Solving Paradigms
        1. Binary Search the Answer - Solve It
-       4. Greedy: Non Classical, Usually Harder - Maximum Sum (II)
     D. Graph
        1. Graph Traversal - Network
        2. All-Pairs Shortest Paths - Page Hopping
@@ -70,10 +69,35 @@ III. Level 3 (178)
     A. Intro (19)
     B. DS (21)
     C. PS (31)
-       1. Iterative/Backtracking (11) 
-       2. Divide and Conquer (3)
-       3. DP (12)
-       4. Greedy (5)
+       1. Iterative Complete Search (3) 
+          a. easy
+             - Integer Sequences From
+             - Expert Enough
+          b. medium
+             - Sales
+             - Tour de France
+          c. hard 
+             - The path in the colored
+          d. harder
+             - Simple Equations
+          e. fancy
+             - Grid Game
+             - Bars
+       2. Backtracking Complete Search (3)
+          a. easy
+             - Back to the 8-Queens
+          b. medium
+             - The dominoes solitaire
+          c. hard
+             - Graph Coloring
+             - LED Test
+       3. Divide and Conquer (3)
+          a. binary search the answer
+             - Fill the Containers
+             - The Monkey and the Oil
+          b. Other Divide and Conquer Problems
+       4. DP (12)
+       5. Greedy (5)
     D. Graph (27)
     E. Math (41)
     F. SP (16)
