@@ -65,16 +65,15 @@ II. Level 2 (57)
        3. Matrix Chain Multiplication
        4. Roman Numerals
 
-III. Level 3 (177)
+III. Level 3 (176)
     A. Intro (19)
     B. DS (21)
-    C. PS (31)
+    C. PS (29)
        1. Iterative Complete Search (3) 
           a. easy
              - Integer Sequences From
              - Expert Enough
           b. medium
-             - Sales
              - Tour de France
           c. hard 
              - The path in the colored
