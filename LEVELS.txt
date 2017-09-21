@@ -65,7 +65,7 @@ II. Level 2 (57)
        3. Matrix Chain Multiplication
        4. Roman Numerals
 
-III. Level 3 (178)
+III. Level 3 (177)
     A. Intro (19)
     B. DS (21)
     C. PS (31)
@@ -84,10 +84,6 @@ III. Level 3 (178)
              - Grid Game
              - Bars
        2. Backtracking Complete Search (3)
-          a. easy
-             - Back to the 8-Queens
-          b. medium
-             - The dominoes solitaire
           c. hard
              - Graph Coloring
              - LED Test
