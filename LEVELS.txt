@@ -65,7 +65,7 @@ II. Level 2 (57)
        3. Matrix Chain Multiplication
        4. Roman Numerals
 
-III. Level 3 (174)
+III. Level 3 (173)
     A. Intro (19)
     B. DS (21)
     C. PS (28)
@@ -97,7 +97,7 @@ III. Level 3 (174)
     F. SP (16)
     G. Geom (11)
     H. Advanced (5)
-    I. Rare (7)
+    I. Rare (6)
 
 IV. Level 4 (119)
     A. Introduction 
