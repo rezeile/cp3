@@ -1,4 +1,4 @@
-II. Level 2 (57) 
+II. Level 2 (56) 
     A. Introduction
        1. Game (Chess) - Chess
        2. Game (Others), Easier - Hangman Judge
@@ -23,7 +23,6 @@ II. Level 2 (57)
        1. [Adhoc] - Back to Intermediate Ma...
        2. Numbering Roads
        3. Brick Game
-       4. Digit Counting
        5. Ant on a Chessboard
        6. Humble Numbers
        7. Smith Numbers
