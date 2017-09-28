@@ -1,7 +1,8 @@
 CC= g++
 RM= rm -vf
 CPPFLAGS= -std=c++11 -Wall -g
-SRCFILES= triangle-wave.cc kindergarten.cc 
+SRCFILES= triangle-wave.cc kindergarten.cc \
+					decode.cc
 OBJFILES= $(patsubst %.cc, %.o, $(SRCFILES))
 PROGFILES= $(patsubst %.cc, %, $(SRCFILES))
 SYMFILES=$(patsubst %.cc, %.dSYM, $(SRCFILES))
