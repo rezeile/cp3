@@ -1,4 +1,4 @@
-II. Level 2 (54) 
+II. Level 2 (53) 
     A. Introduction
        1. Game (Chess) - Chess
        2. Game (Others), Easier - Hangman Judge
@@ -50,7 +50,6 @@ II. Level 2 (54)
        29. Count the factors
        30. Euclid Problem 
     F. String Processing 
-       2. Common Permutation
        3. Immediate Decodability
        4. [String Matching] Power Strings
        5. Wheres Waldorf?
