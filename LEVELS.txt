@@ -1,4 +1,4 @@
-II. Level 2 (53) 
+II. Level 2 (52) 
     A. Introduction
        1. Game (Chess) - Chess
        2. Game (Others), Easier - Hangman Judge
@@ -21,7 +21,6 @@ II. Level 2 (53)
        10. Special Graph (DAG) - Longest Run on Snowb ...
     E. Mathematics
        1. [Adhoc] - Back to Intermediate Ma...
-       2. Numbering Roads
        3. Brick Game
        5. Ant on a Chessboard
        6. Humble Numbers
