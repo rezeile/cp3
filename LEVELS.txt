@@ -1,4 +1,4 @@
-II. Level 2 (52) 
+II. Level 2 (51) 
     A. Introduction
        1. Game (Chess) - Chess
        2. Game (Others), Easier - Hangman Judge
@@ -52,8 +52,6 @@ II. Level 2 (52)
        3. Immediate Decodability
        4. [String Matching] Power Strings
        5. Wheres Waldorf?
-    G. Geometry
-       1. [Basic Geometry] - Colourful Flowers
     H. Rare Topics
        1. [Rare Problems] - The Closest Pair Problem
        2. DNA Sorting
