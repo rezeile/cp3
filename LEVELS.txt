@@ -1,4 +1,4 @@
-II. Level 2 (51) 
+II. Level 2 (50) 
     A. Introduction
        1. Game (Chess) - Chess
        2. Game (Others), Easier - Hangman Judge
@@ -23,7 +23,6 @@ II. Level 2 (51)
        1. [Adhoc] - Back to Intermediate Ma...
        3. Brick Game
        5. Ant on a Chessboard
-       6. Humble Numbers
        7. Smith Numbers
        8. Parity
        9. The Trip
