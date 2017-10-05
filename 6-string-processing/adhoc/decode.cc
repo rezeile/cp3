@@ -1,43 +1,54 @@
 #include <cstdio>
-#include <cstring>
 #include <string>
 #include <iostream>
+#include <sstream>
 #include <vector>
-#include <cmath>
 using namespace std;
 
-char getChar(string s) {
-  string d2 = s.substr(0,3);
-  string d1 = s.substr(3,1) + s.substr(5,s.size());
-  
+#define YES "is immediately decodable"
+#define NO "is not immediately decodable"
 
-  int h1 = 0, h2 = 0;
-  for(int i = 0; i < d2.size(); i++) {
-    if (d2[i] == 'o') {
-      h2 += (int) pow(2,(d2.size() - 1)-i);
+int lineCounter = 0;
+
+void decode(vector<string> &v) {
+  int N = v.size();
+  for(int mask = 0; mask < 1 << N; mask++) {
+    if(__builtin_popcount(mask) == 2) {
+      int count = 0, p, q;
+      for(int i = 0; i < N; i++) {
+        if (1 << i & mask) {
+          if (!count++) {
+            p = i;
+          } else {
+            q = i;
+          }
+        }
+      }
+      int r = (int) v[p].size(), s = (int) v[q].size();
+      int min = r < s ? r : s;
+      string s1 = v[p].substr(0,min);
+      string s2 = v[q].substr(0,min);
+      if (s1.find(s2) != string::npos) {
+        printf("Set %d %s\n",++lineCounter,NO);
+        return;
+      }
     }
   }
-  
-  for(int i = 0; i < d1.size(); i++) {
-    if (d1[i] == 'o') {
-      h1 += (int) pow(2,(d1.size()-1)-i);
-    }
-  }
-  
-  int dec_value = h2*16 + h1;
-  return (char) dec_value;
+  printf("Set %d %s\n",++lineCounter,YES);
 }
 
 int main(int argc, char *argv[]) {
     //if(argc < 2) { fprintf(stderr,"enter an input file"); return -1; }
     //freopen(argv[1],"r",stdin);
-   
+    
     string input;
-    while (getline(cin,input)) {
-      if (input != "___________") {
-        string s = input.substr(2,input.size()-3);
-        printf("%c",getChar(s));
+    while(getline(cin,input)) {
+      vector<string> v;
+      while(input != "9") {
+        v.push_back(input);
+        getline(cin,input);
       }
+      decode(v);
     }
     return 0;
 }
