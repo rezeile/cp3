@@ -1,4 +1,4 @@
-II. Level 2 (49) 
+II. Level 2 (48) 
     A. Introduction
        1. Game (Chess) - Chess
        2. Game (Others), Easier - Hangman Judge
@@ -21,35 +21,34 @@ II. Level 2 (49)
        10. Special Graph (DAG) - Longest Run on Snowb ...
     E. Mathematics
        1. [Adhoc] - Back to Intermediate Ma...
-       3. Brick Game
-       5. Ant on a Chessboard
-       7. Smith Numbers
-       8. Parity
-       9. The Trip
-       10. [Cycle Finding] - Pseudo-Random Numbers
-       11. [Java BigInteger Class] - Adding Reversed Numbers
-       12. Very Easy !!!
-       13. Multiple of 17
-       14. What Base Is This?
-       15. Basically Speaking
-       16. Simply Emirp
-       17. [Combinatorics] - Ray Through Glasses
-       18. Find the ways !
-       19. Diagonal
-       20. [Number Theory] - Twin Primes
-       21. Maximum GCD
-       22. Factorial Frequencies
-       23. 500!
-       24. Mischievous Children
-       25. Prime Factors
-       26. Factovisors
-       27. Divisors
-       28. Irreducable Basic Fractions
-       29. Count the factors
-       30. Euclid Problem 
+       2. Ant on a Chessboard
+       3. Smith Numbers
+       4. Parity
+       5. The Trip
+       6. [Cycle Finding] - Pseudo-Random Numbers
+       7. [Java BigInteger Class] - Adding Reversed Numbers
+       8. Very Easy !!!
+       9. Multiple of 17
+       10. What Base Is This?
+       11. Basically Speaking
+       12. Simply Emirp
+       13. [Combinatorics] - Ray Through Glasses
+       14. Find the ways !
+       15. Diagonal
+       16. [Number Theory] - Twin Primes
+       17. Maximum GCD
+       18. Factorial Frequencies
+       19. 500!
+       20. Mischievous Children
+       21. Prime Factors
+       22. Factovisors
+       23. Divisors
+       24. Irreducable Basic Fractions
+       25. Count the factors
+       26. Euclid Problem 
     F. String Processing 
-       4. [String Matching] Power Strings
-       5. Wheres Waldorf?
+       1. [String Matching] Power Strings
+       2. Wheres Waldorf?
     H. Rare Topics
        1. [Rare Problems] - The Closest Pair Problem
        2. DNA Sorting
