@@ -22,7 +22,7 @@ void printFactors(vi factors) {
 void sieve(ll max) {
   ll size = max + 1; // primes in range [0..max]
   bs.set();
-  bs[0] = 0; bs[1];
+  bs[0] = 0; bs[1] = 0;
   for(ll i = 2; i < size; i++) {
     if (bs[i]) {
       primes.push_back(i);
