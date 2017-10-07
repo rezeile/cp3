@@ -1,4 +1,4 @@
-II. Level 2 (48) 
+II. Level 2 (47) 
     A. Introduction
        1. Game (Chess) - Chess
        2. Game (Others), Easier - Hangman Judge
@@ -22,30 +22,29 @@ II. Level 2 (48)
     E. Mathematics
        1. [Adhoc] - Back to Intermediate Ma...
        2. Ant on a Chessboard
-       3. Smith Numbers
-       4. Parity
-       5. The Trip
-       6. [Cycle Finding] - Pseudo-Random Numbers
-       7. [Java BigInteger Class] - Adding Reversed Numbers
-       8. Very Easy !!!
-       9. Multiple of 17
-       10. What Base Is This?
-       11. Basically Speaking
-       12. Simply Emirp
-       13. [Combinatorics] - Ray Through Glasses
-       14. Find the ways !
-       15. Diagonal
-       16. [Number Theory] - Twin Primes
-       17. Maximum GCD
-       18. Factorial Frequencies
-       19. 500!
-       20. Mischievous Children
-       21. Prime Factors
-       22. Factovisors
-       23. Divisors
-       24. Irreducable Basic Fractions
-       25. Count the factors
-       26. Euclid Problem 
+       3. Parity
+       4. The Trip
+       5. [Cycle Finding] - Pseudo-Random Numbers
+       6. [Java BigInteger Class] - Adding Reversed Numbers
+       7. Very Easy !!!
+       8. Multiple of 17
+       9. What Base Is This?
+       10. Basically Speaking
+       11. Simply Emirp
+       12. [Combinatorics] - Ray Through Glasses
+       13. Find the ways !
+       14. Diagonal
+       15. [Number Theory] - Twin Primes
+       16. Maximum GCD
+       17. Factorial Frequencies
+       18. 500!
+       19. Mischievous Children
+       20. Prime Factors
+       21. Factovisors
+       22. Divisors
+       23. Irreducable Basic Fractions
+       24. Count the factors
+       25. Euclid Problem 
     F. String Processing 
        1. [String Matching] Power Strings
        2. Wheres Waldorf?
