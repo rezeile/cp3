@@ -1,4 +1,8 @@
-II. Level 2 (47) 
+I. Level 1 (1)
+    A. Mathematics
+       1. Divisors
+
+II. Level 2 (45) 
     A. Introduction
        1. Game (Chess) - Chess
        2. Game (Others), Easier - Hangman Judge
@@ -22,10 +26,9 @@ II. Level 2 (47)
     E. Mathematics
        1. [Adhoc] - Back to Intermediate Ma...
        2. Ant on a Chessboard
-       3. Parity
-       4. The Trip
-       5. [Cycle Finding] - Pseudo-Random Numbers
-       6. [Java BigInteger Class] - Adding Reversed Numbers
+       3. The Trip
+       4. [Cycle Finding] - Pseudo-Random Numbers
+       5. [Java BigInteger Class] - Adding Reversed Numbers
        7. Very Easy !!!
        8. Multiple of 17
        9. What Base Is This?
@@ -41,7 +44,6 @@ II. Level 2 (47)
        19. Mischievous Children
        20. Prime Factors
        21. Factovisors
-       22. Divisors
        23. Irreducable Basic Fractions
        24. Count the factors
        25. Euclid Problem 

@@ -4,7 +4,7 @@ CPPFLAGS= -std=c++11 -Wall -g
 SRCFILES= skew-binary.cc perfection.cc peters-smokes.cc \
 		  	  cantor.cc digit-counting.cc \
 					numbering-roads.cc humble.cc \
-					brick.cc smith.cc
+					brick.cc smith.cc parity.cc
 OBJFILES= $(patsubst %.cc, %.o, $(SRCFILES))
 PROGFILES= $(patsubst %.cc, %, $(SRCFILES))
 SYMFILES=$(patsubst %.cc, %.dSYM, $(SRCFILES))
