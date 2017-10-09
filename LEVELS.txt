@@ -1,7 +1,3 @@
-I. Level 1 (1)
-    A. Mathematics
-       1. Divisors
-
 II. Level 2 (45) 
     A. Introduction
        1. Game (Chess) - Chess
