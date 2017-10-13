@@ -1,4 +1,4 @@
-II. Level 2 (45) 
+II. Level 2 (44) 
     A. Introduction
        1. Game (Chess) - Chess
        2. Game (Others), Easier - Hangman Judge
@@ -9,7 +9,6 @@ II. Level 2 (45)
     C. Problem Solving Paradigms
        1. Binary Search the Answer - Solve It
     D. Graph
-       1. Graph Traversal - Network
        2. All-Pairs Shortest Paths - Page Hopping
        3. APSP - Arbitrage
        4. Minimum Spanning Tree - Dark roads
