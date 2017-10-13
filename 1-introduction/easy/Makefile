@@ -5,7 +5,7 @@ SRCFILES= cost-cutting.cc nlogonia.cc \
           horse-dash.cc gov-proposal.cc \
           snail.cc event-planning.cc \
           car-buyer.cc bender.cc \
-					tex.cc parking.cc
+					tex.cc parking.cc eco.cc
 OBJFILES= $(patsubst %.cc, %.o, $(SRCFILES))
 PROGFILES= $(patsubst %.cc, %, $(SRCFILES))
 SYMFILES=$(patsubst %.cc, %.dSYM, $(SRCFILES))
