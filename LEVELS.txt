@@ -9,15 +9,15 @@ II. Level 2 (44)
     C. Problem Solving Paradigms
        1. Binary Search the Answer - Solve It
     D. Graph
-       2. All-Pairs Shortest Paths - Page Hopping
-       3. APSP - Arbitrage
-       4. Minimum Spanning Tree - Dark roads
-       5. MST - Audiophobia
-       6. MST - Arctic Network
-       7. SSSP - Sending Email
-       8. SSSP - Wormholes
-       9. Network Flow - Internet Bandwidth
-       10. Special Graph (DAG) - Longest Run on Snowb ...
+       1. All-Pairs Shortest Paths - Page Hopping
+       2. APSP - Arbitrage
+       3. Minimum Spanning Tree - Dark roads
+       4. MST - Audiophobia
+       5. MST - Arctic Network
+       6. SSSP - Sending Email
+       7. SSSP - Wormholes
+       8. Network Flow - Internet Bandwidth
+       9. Special Graph (DAG) - Longest Run on Snowb ...
     E. Mathematics
        1. [Adhoc] - Back to Intermediate Ma...
        2. Ant on a Chessboard
