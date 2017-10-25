@@ -1,4 +1,4 @@
-II. Level 2 (44) 
+II. Level 2 (48) 
     A. Introduction
        1. Game (Chess) - Chess
        2. Game (Others), Easier - Hangman Judge
@@ -9,42 +9,46 @@ II. Level 2 (44)
     C. Problem Solving Paradigms
        1. Binary Search the Answer - Solve It
     D. Graph
+       1. Graph Traversal - Critical Links
        1. All-Pairs Shortest Paths - Page Hopping
        2. APSP - Arbitrage
        3. Minimum Spanning Tree - Dark roads
        4. MST - Audiophobia
        5. MST - Arctic Network
+       5. SSSP - Word Transformation
+       5. SSSP - Bombs 
        6. SSSP - Sending Email
        7. SSSP - Wormholes
        8. Network Flow - Internet Bandwidth
        9. Special Graph (DAG) - Longest Run on Snowb ...
     E. Mathematics
        1. [Adhoc] - Back to Intermediate Ma...
-       2. Ant on a Chessboard
-       3. The Trip
+       2. [Adhoc] - Ant on a Chessboard
+       3. [Adhoc] - The Trip
        4. [Cycle Finding] - Pseudo-Random Numbers
        5. [Java BigInteger Class] - Adding Reversed Numbers
-       7. Very Easy !!!
-       8. Multiple of 17
-       9. What Base Is This?
-       10. Basically Speaking
-       11. Simply Emirp
-       12. [Combinatorics] - Ray Through Glasses
-       13. Find the ways !
-       14. Diagonal
-       15. [Number Theory] - Twin Primes
-       16. Maximum GCD
-       17. Factorial Frequencies
-       18. 500!
-       19. Mischievous Children
-       20. Prime Factors
-       21. Factovisors
-       23. Irreducable Basic Fractions
-       24. Count the factors
-       25. Euclid Problem 
+       7. [Java BigInteger Class] - Very Easy !!!
+       8. [Java BigInteger Class] - Multiple of 17
+       9. [Java BigInteger Class] - What Base Is This?
+       10.[Java BigInteger Class] - Basically Speaking
+       11.[Java BigInteger Class] -  Simply Emirp
+       12.[Combinatorics] - Ray Through Glasses
+       13.[Combinatorics] -  Find the ways !
+       14.[Combinatorics] -  Diagonal
+       15.[Number Theory] - Twin Primes
+       16.[Number Theory] - Maximum GCD
+       17.[Number Theory] -  Factorial Frequencies
+       18.[Number Theory] -  500!
+       19.[Number Theory] -  Mischievous Children
+       20.[Number Theory] -  Prime Factors
+       21.[Number Theory] -  Factovisors
+       23.[Number Theory] -  Irreducable Basic Fractions
+       24.[Number Theory] -  Count the factors
+       25.[Number Theory] -  Euclid Problem 
     F. String Processing 
        1. [String Matching] Power Strings
-       2. Wheres Waldorf?
+       2. [String Matching] Wheres Waldorf?
+       3. [Dynamic Programming] Longest Palindrome
     H. Rare Topics
        1. [Rare Problems] - The Closest Pair Problem
        2. DNA Sorting
