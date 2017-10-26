@@ -1,42 +1,90 @@
 #include <cstdio>
 #include <cmath>
-#include <string>
 using namespace std;
-using i = int;
-#define EPS 1e-5
 
+#define DELTA 1e-9
 
-double getSum(i p,i q,i r,i s,i t,i u,double x) {
-    return p*exp(-x) + q*sin(x) + r*cos(x) + s*tan(x) + t*x*x + u;
+using I = int;
+using D = double;
+
+D compute(I p,I q,I r,I s,I t,I u,D x) {
+  D left = p*exp(-x) + q*sin(x) + r*cos(x);
+  D right = s*tan(x) + t*x*x + u;
+  return left + right;
 }
 
-bool can(i p,i q,i r,i s,i t,i u,double x) {
-    double ans = getSum(p,q,r,s,t,u,x);
-    return abs(ans-0.0) < EPS;
-}
-
-void solveIt(i p,i q,i r,i s,i t,i u) {
-    double lo = 0.0, hi = 1.0, mid = 0.0, ans = 0.0;
-    while(abs(hi-lo) > EPS) {
-        double l = getSum(p,q,r,s,t,u,lo);
-        double h = getSum(p,q,r,s,t,u,hi);
-        printf("lo = %f, hi = %f\n",lo,hi);
-        mid = (lo+hi)/2.0; 
-        double m = getSum(p,q,r,s,t,u,mid);
-        if (l == h) { lo += 0.0001; hi -= 0.0001; }
-        else if (can(p,q,r,s,t,u,mid)) { ans = mid;}
-        else if (abs(l-m) < abs(h-m)) { hi = mid; }
-        else lo = mid;
+bool leftCloserToZero(D l,D r,D m) {
+  if (m > 0.0) {
+    if (l < 0.0 && r < 0.0) {
+      return abs(l) < abs(r);
+    } else {
+      return l < 0.0;
     }
-    printf("%.4f\n",ans);
+  } else {
+    if (l > 0.0 && r > 0.0) {
+      return l < r;
+    } else {
+      return l > 0.0;
+    }
+  }
+}
+
+bool isZero(D x) {
+  return abs(x) - 0.0 <= 0.000001;
+}
+
+bool areEqual(D x,D y) {
+  return abs(x-y) <= 0.000000001;; 
+}
+
+void printOutput(D x) {
+  printf("%.4lf\n",x); 
+  //printf("%.4lf\n",trunc(x*10000)/10000); 
+}
+
+bool noSolution(D x, D y) {
+  return (x > 0.0 && y > 0.0) || (x < 0.0 && y < 0.0);
+}
+
+void debugPrint(D x,D m,D y,D left,D mid, D right) {
+  printf("x = "); printOutput(x);
+  printf("m = "); printOutput(m);
+  printf("y = "); printOutput(y);
+  
+  printf("left = "); printOutput(left);
+  printf("mid = "); printOutput(mid);
+  printf("right = "); printOutput(right);
+  printf("\n");
+}
+
+void solve(I p,I q,I r,I s,I t,I u,D x,D y) {
+  D left = compute(p,q,r,s,t,u,x);
+  D m = (x+y)/2.0;
+  D mid = (compute(p,q,r,s,t,u,m));;
+  D right = compute(p,q,r,s,t,u,y);
+
+  //debugPrint(x,m,y,left,mid,right);
+    
+  if (isZero(left)) { printOutput(x); return; }
+  if (isZero(mid)) { printOutput(m); return; }
+    
+  //printf("No solution: (left,mid): %s\n",(noSolution(left,mid) ?  "true": "false"));
+  if (isZero(right)) { printOutput(y); return; }
+  if (areEqual(x,y)) { printf("No solution\n"); return; }
+
+  if (leftCloserToZero(left,right,mid)) {
+    solve(p,q,r,s,t,u,x,m);
+  } else {
+    solve(p,q,r,s,t,u,m+DELTA,y);
+  }
 }
 
 int main(int argc, char *argv[]) {
-    if(argc < 2) { fprintf(stderr,"enter an input file"); return -1; }
-    freopen(argv[1],"r",stdin);
+    //if(argc < 2) { fprintf(stderr,"enter an input file"); return -1; }
+    //freopen(argv[1],"r",stdin);
     int p,q,r,s,t,u;
-    while(scanf("%d %d %d %d %d %d\n",&p,&q,&r,&s,&t,&u) != EOF)  {
-        solveIt(p,q,r,s,t,u);
+    while(scanf("%d %d %d %d %d %d\n",&p,&q,&r,&s,&t,&u) != EOF) {
+      solve(p,q,r,s,t,u,0.0,1.0);
     }
     return 0;
 }
