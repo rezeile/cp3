@@ -39,9 +39,8 @@ I. Level 2
        22.[Number Theory] -  Count the factors
        23.[Number Theory] -  Euclid Problem 
     D. String Processing 
-       1. [String Matching] Power Strings
-       2. [String Matching] Wheres Waldorf?
-       3. [Dynamic Programming] Longest Palindrome
+       1. [String Matching] Wheres Waldorf?
+       2. [Dynamic Programming] Longest Palindrome
     E. Rare Topics
        1. [Rare Problems] - The Closest Pair Problem
        2. [Rare Problems] - DNA Sorting
