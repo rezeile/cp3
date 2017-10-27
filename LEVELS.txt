@@ -1,20 +1,20 @@
 I. Level 2  
     A. Introduction
-       1. Game (Chess) - Chess
-       2. Game (Others), Easier - Hangman Judge
+       1. [Game:Chess] - Chess
+       2. [Game:Others] -  Easier - Hangman Judge
     B. Graph
-       1. Graph Traversal - Critical Links
-       2. All-Pairs Shortest Paths - Page Hopping
-       3. APSP - Arbitrage
-       4. Minimum Spanning Tree - Dark roads
-       5. MST - Audiophobia
-       6. MST - Arctic Network
-       7. SSSP - Word Transformation
-       8. SSSP - Bombs 
-       9. SSSP - Sending Email
-       10. SSSP - Wormholes
-       11. Network Flow - Internet Bandwidth
-       12. Special Graph (DAG) - Longest Run on Snowb ...
+       1. [Graph Traversal] - Critical Links
+       2. [APSP] - Page Hopping
+       3. [APSP] - Arbitrage
+       4. [MST] - Dark roads
+       5. [MST] - Audiophobia
+       6. [MST] - Arctic Network
+       7. [SSSP] - Word Transformation
+       8. [SSSP] - Bombs 
+       9. [SSSP] - Sending Email
+       10.[SSSP] - Wormholes
+       11.[Network Flow] - Internet Bandwidth
+       12.[Special Graph:DAG] - Longest Run on Snowb ...
     C. Mathematics
        1. [Adhoc] - Back to Intermediate Ma...
        2. [Adhoc] - Ant on a Chessboard
@@ -24,7 +24,7 @@ I. Level 2
        6. [Java BigInteger Class] - Very Easy !!!
        7. [Java BigInteger Class] - Multiple of 17
        8. [Java BigInteger Class] - What Base Is This?
-       9.[Java BigInteger Class] - Basically Speaking
+       9. [Java BigInteger Class] - Basically Speaking
        10.[Java BigInteger Class] -  Simply Emirp
        11.[Combinatorics] - Ray Through Glasses
        12.[Combinatorics] -  Find the ways !
@@ -45,9 +45,9 @@ I. Level 2
        3. [Dynamic Programming] Longest Palindrome
     E. Rare Topics
        1. [Rare Problems] - The Closest Pair Problem
-       2. DNA Sorting
-       3. Matrix Chain Multiplication
-       4. Roman Numerals
+       2. [Rare Problems] - DNA Sorting
+       3. [Rare Problems] - Matrix Chain Multiplication
+       4. [Rare Problems] - Roman Numerals
 
 II. Level 3 
     A. Intro (19)
