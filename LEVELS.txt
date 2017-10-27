@@ -1,7 +1,6 @@
 I. Level 2  
     A. Introduction
        1. [Game:Chess] - Chess
-       2. [Game:Others] -  Easier - Hangman Judge
     B. Graph
        1. [Graph Traversal] - Critical Links
        2. [APSP] - Page Hopping
