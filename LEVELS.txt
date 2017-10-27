@@ -1,87 +1,58 @@
-II. Level 2 (48) 
+I. Level 2  
     A. Introduction
        1. Game (Chess) - Chess
        2. Game (Others), Easier - Hangman Judge
-    B. Data Structures and Libraries
-       1. Graph Data Structures - Easy Problem from Rujia...
-       2. Union-Find Disjoint Sets - Network Connections
-       3. Union-Find ... - Virtual Friends
-    C. Problem Solving Paradigms
-       1. Binary Search the Answer - Solve It
-    D. Graph
+    B. Graph
        1. Graph Traversal - Critical Links
-       1. All-Pairs Shortest Paths - Page Hopping
-       2. APSP - Arbitrage
-       3. Minimum Spanning Tree - Dark roads
-       4. MST - Audiophobia
-       5. MST - Arctic Network
-       5. SSSP - Word Transformation
-       5. SSSP - Bombs 
-       6. SSSP - Sending Email
-       7. SSSP - Wormholes
-       8. Network Flow - Internet Bandwidth
-       9. Special Graph (DAG) - Longest Run on Snowb ...
-    E. Mathematics
+       2. All-Pairs Shortest Paths - Page Hopping
+       3. APSP - Arbitrage
+       4. Minimum Spanning Tree - Dark roads
+       5. MST - Audiophobia
+       6. MST - Arctic Network
+       7. SSSP - Word Transformation
+       8. SSSP - Bombs 
+       9. SSSP - Sending Email
+       10. SSSP - Wormholes
+       11. Network Flow - Internet Bandwidth
+       12. Special Graph (DAG) - Longest Run on Snowb ...
+    C. Mathematics
        1. [Adhoc] - Back to Intermediate Ma...
        2. [Adhoc] - Ant on a Chessboard
        3. [Adhoc] - The Trip
        4. [Cycle Finding] - Pseudo-Random Numbers
        5. [Java BigInteger Class] - Adding Reversed Numbers
-       7. [Java BigInteger Class] - Very Easy !!!
-       8. [Java BigInteger Class] - Multiple of 17
-       9. [Java BigInteger Class] - What Base Is This?
-       10.[Java BigInteger Class] - Basically Speaking
-       11.[Java BigInteger Class] -  Simply Emirp
-       12.[Combinatorics] - Ray Through Glasses
-       13.[Combinatorics] -  Find the ways !
-       14.[Combinatorics] -  Diagonal
-       15.[Number Theory] - Twin Primes
-       16.[Number Theory] - Maximum GCD
-       17.[Number Theory] -  Factorial Frequencies
-       18.[Number Theory] -  500!
-       19.[Number Theory] -  Mischievous Children
-       20.[Number Theory] -  Prime Factors
-       21.[Number Theory] -  Factovisors
-       23.[Number Theory] -  Irreducable Basic Fractions
-       24.[Number Theory] -  Count the factors
-       25.[Number Theory] -  Euclid Problem 
-    F. String Processing 
+       6. [Java BigInteger Class] - Very Easy !!!
+       7. [Java BigInteger Class] - Multiple of 17
+       8. [Java BigInteger Class] - What Base Is This?
+       9.[Java BigInteger Class] - Basically Speaking
+       10.[Java BigInteger Class] -  Simply Emirp
+       11.[Combinatorics] - Ray Through Glasses
+       12.[Combinatorics] -  Find the ways !
+       13.[Combinatorics] -  Diagonal
+       14.[Number Theory] - Twin Primes
+       15.[Number Theory] - Maximum GCD
+       16.[Number Theory] -  Factorial Frequencies
+       17.[Number Theory] -  500!
+       18.[Number Theory] -  Mischievous Children
+       19.[Number Theory] -  Prime Factors
+       20.[Number Theory] -  Factovisors
+       21.[Number Theory] -  Irreducable Basic Fractions
+       22.[Number Theory] -  Count the factors
+       23.[Number Theory] -  Euclid Problem 
+    D. String Processing 
        1. [String Matching] Power Strings
        2. [String Matching] Wheres Waldorf?
        3. [Dynamic Programming] Longest Palindrome
-    H. Rare Topics
+    E. Rare Topics
        1. [Rare Problems] - The Closest Pair Problem
        2. DNA Sorting
        3. Matrix Chain Multiplication
        4. Roman Numerals
 
-III. Level 3 (172)
+II. Level 3 
     A. Intro (19)
     B. DS (21)
     C. PS (28)
-       1. Iterative Complete Search (3) 
-          a. easy
-             - Expert Enough
-          b. medium
-             - Tour de France
-          c. hard 
-             - The path in the colored
-          d. harder
-             - Simple Equations
-          e. fancy
-             - Grid Game
-             - Bars
-       2. Backtracking Complete Search (3)
-          c. hard
-             - Graph Coloring
-             - LED Test
-       3. Divide and Conquer (3)
-          a. binary search the answer
-             - Fill the Containers
-             - The Monkey and the Oil
-          b. Other Divide and Conquer Problems
-       4. DP (12)
-       5. Greedy (5)
     D. Graph (27)
     E. Math (41)
     F. SP (15)
@@ -89,7 +60,7 @@ III. Level 3 (172)
     H. Advanced (5)
     I. Rare (6)
 
-IV. Level 4 (119)
+III. Level 4 
     A. Introduction 
        1. [Ad Hoc] All Integer Average
        2. Mobile Casanova
@@ -160,7 +131,7 @@ IV. Level 4 (119)
     H. More Advanced Topics (15)
     I. Rare (23)
 
-V. Level 5 (42)
+IV. Level 5 
    A. Introduction
       1. Consanguine Calculations
    B. Problem Solving Paradigms 
@@ -184,7 +155,7 @@ V. Level 5 (42)
    G. Advanced (16)
    H. Rare (12)
 
-VI. Level 6
+V. Level 6
     A. String Processing 
        1. ASCII Diamondi
     B. Advanced 
