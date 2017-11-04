@@ -1,5 +1,7 @@
 #!/usr/bin/python 
 
+# Reformat LEVELS.txt
+
 import sys
 
 class HeadingTracker:
