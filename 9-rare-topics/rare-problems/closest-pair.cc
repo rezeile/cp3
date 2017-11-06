@@ -7,7 +7,7 @@ using namespace std;
 
 #define INF "INFINITY"
 
-using pii = pair<int,int>;
+using pii = pair<double,double>;
 
 
 double dist(double a1,double b1,double a2,double b2) {
@@ -28,7 +28,7 @@ void solve(vector<pii> &v) {
   }
   
   if (ans < 10000.0) {
-    printf("%.4f\n",ans);
+    printf("%.4lf\n",ans);
   } else {
     cout << INF << endl;
   }
@@ -37,12 +37,13 @@ void solve(vector<pii> &v) {
 int main(int argc, char *argv[]) {
     //if(argc < 2) { fprintf(stderr,"enter an input file"); return -1; }
     //freopen(argv[1],"r",stdin);
-    int x,y,N;
+    int N;
+    double x,y;
     while(scanf("%d\n",&N) != EOF) {
       if (N == 0) break;
       vector<pii> v(N);
       for(int i = 0; i < v.size(); i++) {
-        scanf("%d %d\n",&x,&y);
+        scanf("%lf %lf\n",&x,&y);
         v[i].first = x; v[i].second = y;
       }
       solve(v);
