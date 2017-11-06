@@ -42,10 +42,9 @@ I. Level 2
        1. [String Matching] Wheres Waldorf?
        2. [Dynamic Programming] Longest Palindrome
     E. Rare Topics
-       1. [Rare Problems] - The Closest Pair Problem
-       2. [Rare Problems] - DNA Sorting
-       3. [Rare Problems] - Matrix Chain Multiplication
-       4. [Rare Problems] - Roman Numerals
+       1. [Rare Problems] - DNA Sorting
+       2. [Rare Problems] - Matrix Chain Multiplication
+       3. [Rare Problems] - Roman Numerals
 
 II. Level 3 
     A. Intro (19)
