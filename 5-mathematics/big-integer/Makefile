@@ -6,7 +6,8 @@ JC = javac
 	$(JC) $(JFLAGS) $*.java
 
 CLASSES = \
-        VeryEasy.java 
+        VeryEasy.java \
+				Emirp.java 
 
 default: classes
 
