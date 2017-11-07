@@ -19,24 +19,22 @@ I. Level 2
        2. [Adhoc] - Ant on a Chessboard
        3. [Adhoc] - The Trip
        4. [Cycle Finding] - Pseudo-Random Numbers
-       5. [Java BigInteger Class] - Adding Reversed Numbers
-       6. [Java BigInteger Class] - Multiple of 16
-       7. [Java BigInteger Class] - What Base Is This?
-       8. [Java BigInteger Class] - Basically Speaking
-       9.[Java BigInteger Class] -  Simply Emirp
-       10.[Combinatorics] - Ray Through Glasses
-       11.[Combinatorics] -  Find the ways !
-       12.[Combinatorics] -  Diagonal
-       13.[Number Theory] - Twin Primes
-       14.[Number Theory] - Maximum GCD
-       15.[Number Theory] -  Factorial Frequencies
-       16.[Number Theory] -  500!
-       17.[Number Theory] -  Mischievous Children
-       18.[Number Theory] -  Prime Factors
-       19.[Number Theory] -  Factovisors
-       20.[Number Theory] -  Irreducable Basic Fractions
-       21.[Number Theory] -  Count the factors
-       22.[Number Theory] -  Euclid Problem 
+       5. [Java BigInteger Class] - Multiple of 15
+       6. [Java BigInteger Class] - What Base Is This?
+       7. [Java BigInteger Class] - Basically Speaking
+       8. [Combinatorics] - Ray Through Glasses
+       9. [Combinatorics] -  Find the ways !
+       10.[Combinatorics] -  Diagonal
+       11.[Number Theory] - Twin Primes
+       12.[Number Theory] - Maximum GCD
+       13.[Number Theory] -  Factorial Frequencies
+       14.[Number Theory] -  500!
+       15.[Number Theory] -  Mischievous Children
+       16.[Number Theory] -  Prime Factors
+       17.[Number Theory] -  Factovisors
+       18.[Number Theory] -  Irreducable Basic Fractions
+       19.[Number Theory] -  Count the factors
+       20.[Number Theory] -  Euclid Problem 
     D. String Processing 
        1. [String Matching] Wheres Waldorf?
        2. [Dynamic Programming] Longest Palindrome

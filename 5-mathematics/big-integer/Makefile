@@ -7,8 +7,8 @@ JC = javac
 
 CLASSES = \
         VeryEasy.java \
-				Emirp.java 
-
+				Emirp.java \
+				ReverseAdd.java 
 default: classes
 
 classes: $(CLASSES:.java=.class)
