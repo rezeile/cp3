@@ -19,20 +19,19 @@ I. Level 2
        2. [Adhoc] - Ant on a Chessboard
        3. [Adhoc] - The Trip
        4. [Cycle Finding] - Pseudo-Random Numbers
-       5. [Java BigInteger Class] - Basically Speaking
-       6. [Combinatorics] - Ray Through Glasses
-       7. [Combinatorics] -  Find the ways !
-       8.[Combinatorics] -  Diagonal
-       9.[Number Theory] - Twin Primes
-       10.[Number Theory] - Maximum GCD
-       11.[Number Theory] -  Factorial Frequencies
-       12.[Number Theory] -  500!
-       13.[Number Theory] -  Mischievous Children
-       14.[Number Theory] -  Prime Factors
-       15.[Number Theory] -  Factovisors
-       16.[Number Theory] -  Irreducable Basic Fractions
-       17.[Number Theory] -  Count the factors
-       18.[Number Theory] -  Euclid Problem 
+       5. [Combinatorics] - Ray Through Glasses
+       6. [Combinatorics] -  Find the ways !
+       7.[Combinatorics] -  Diagonal
+       8.[Number Theory] - Twin Primes
+       9.[Number Theory] - Maximum GCD
+       10.[Number Theory] -  Factorial Frequencies
+       11.[Number Theory] -  500!
+       12.[Number Theory] -  Mischievous Children
+       13.[Number Theory] -  Prime Factors
+       14.[Number Theory] -  Factovisors
+       15.[Number Theory] -  Irreducable Basic Fractions
+       16.[Number Theory] -  Count the factors
+       17.[Number Theory] -  Euclid Problem 
     D. String Processing 
        1. [String Matching] Wheres Waldorf?
        2. [Dynamic Programming] Longest Palindrome
