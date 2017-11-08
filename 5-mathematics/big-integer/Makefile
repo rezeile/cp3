@@ -9,7 +9,8 @@ CLASSES = \
         VeryEasy.java \
 				Emirp.java \
 				ReverseAdd.java \
-				MultOf17.java
+				MultOf17.java \
+				Base.java
 default: classes
 
 classes: $(CLASSES:.java=.class)
