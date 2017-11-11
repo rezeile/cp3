@@ -1,4 +1,4 @@
-I. Level 2  
+I. Level 2 (33)  
     A. Introduction
        1. [Game:Chess] - Chess
     B. Graph
