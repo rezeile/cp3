@@ -5,7 +5,7 @@ SRCFILES= skew-binary.cc perfection.cc peters-smokes.cc \
   	  cantor.cc digit-counting.cc \
 	  numbering-roads.cc humble.cc \
 	  brick.cc smith.cc parity.c \
-	  back2intermediate.ccc
+	  back2intermediate.cc ant.cc
 OBJFILES= $(patsubst %.cc, %.o, $(SRCFILES))
 PROGFILES= $(patsubst %.cc, %, $(SRCFILES))
 SYMFILES=$(patsubst %.cc, %.dSYM, $(SRCFILES))
